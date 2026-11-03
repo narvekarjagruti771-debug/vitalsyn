@@ -1,0 +1,3468 @@
+{
+  "patients": {
+    "pat-1": {
+      "id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58,
+      "sex": "male",
+      "phone": "+91 98201 44812",
+      "email": "ramesh.patel@email.in",
+      "blood_type": "B+",
+      "bmi": 29.4,
+      "sbp": 158,
+      "dbp": 96,
+      "total_chol": 248,
+      "hdl_chol": 38,
+      "fasting_glucose": 112,
+      "hba1c": 6.1,
+      "serum_creatinine": 1.2,
+      "uacr": 45,
+      "smoker": true,
+      "diabetes": false,
+      "afib": false,
+      "history": [
+        {
+          "date": "2026-05-10",
+          "sbp": 142,
+          "glucose": 104,
+          "risk_note": "Mild blood pressure elevation."
+        },
+        {
+          "date": "2026-08-15",
+          "sbp": 150,
+          "glucose": 108,
+          "risk_note": "Hypertension progressing, smoking cessation advised."
+        },
+        {
+          "date": "2026-11-01",
+          "sbp": 158,
+          "glucose": 112,
+          "risk_note": "High cardiovascular risk spike detected."
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 120.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 158.0,
+          "glucose": 112.0,
+          "risk_score": 67.0,
+          "risk_category": "Critical Cerebrovascular Risk",
+          "risk_note": "VITALSYN Check: Cerebrovascular Stroke Risk (67.0%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 123.0,
+          "glucose": 112.0,
+          "risk_score": 29.2,
+          "risk_category": "Moderate (Pre-Diabetes Alert)",
+          "risk_note": "VITALSYN Check: Type 2 Diabetes Mellitus (29.2%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 123.0,
+          "glucose": 112.0,
+          "risk_score": 29.2,
+          "risk_category": "Moderate (Pre-Diabetes Alert)",
+          "risk_note": "VITALSYN Check: Type 2 Diabetes Mellitus (29.2%)"
+        },
+        {
+          "date": "2026-11-03",
+          "sbp": 123.0,
+          "glucose": 112.0,
+          "risk_score": 29.2,
+          "risk_category": "Moderate (Pre-Diabetes Alert)",
+          "risk_note": "VITALSYN Check: Type 2 Diabetes Mellitus (29.2%)"
+        }
+      ]
+    },
+    "pat-2": {
+      "id": "pat-2",
+      "name": "Ananya Sen",
+      "age": 47,
+      "sex": "female",
+      "phone": "+91 98450 71290",
+      "email": "ananya.sen@email.in",
+      "blood_type": "A+",
+      "bmi": 33.1,
+      "sbp": 136,
+      "dbp": 86,
+      "total_chol": 215,
+      "hdl_chol": 44,
+      "fasting_glucose": 128,
+      "hba1c": 6.7,
+      "serum_creatinine": 0.9,
+      "uacr": 25,
+      "smoker": false,
+      "diabetes": true,
+      "afib": false,
+      "history": [
+        {
+          "date": "2026-04-12",
+          "sbp": 128,
+          "glucose": 110,
+          "risk_note": "Impaired morning fasting blood sugar."
+        },
+        {
+          "date": "2026-07-20",
+          "sbp": 132,
+          "glucose": 120,
+          "risk_note": "Pre-diabetes transitioning to early diabetes."
+        },
+        {
+          "date": "2026-10-28",
+          "sbp": 136,
+          "glucose": 128,
+          "risk_note": "HbA1c reached 6.7%, endocrine follow-up required."
+        }
+      ]
+    },
+    "pat-3": {
+      "id": "pat-3",
+      "name": "Vikram Malhotra",
+      "age": 66,
+      "sex": "male",
+      "phone": "+91 97110 52391",
+      "email": "vikram.m@email.in",
+      "blood_type": "O+",
+      "bmi": 27.8,
+      "sbp": 152,
+      "dbp": 88,
+      "total_chol": 195,
+      "hdl_chol": 41,
+      "fasting_glucose": 118,
+      "hba1c": 6.3,
+      "serum_creatinine": 1.9,
+      "uacr": 210,
+      "smoker": false,
+      "diabetes": true,
+      "afib": false,
+      "history": [
+        {
+          "date": "2026-03-01",
+          "sbp": 140,
+          "glucose": 105,
+          "risk_note": "Mild renal decline observed."
+        },
+        {
+          "date": "2026-06-15",
+          "sbp": 146,
+          "glucose": 112,
+          "risk_note": "Urine protein microalbuminuria detected."
+        },
+        {
+          "date": "2026-10-15",
+          "sbp": 152,
+          "glucose": 118,
+          "risk_note": "Kidney strain with elevated creatinine (1.9)."
+        }
+      ]
+    },
+    "pat-4": {
+      "id": "pat-4",
+      "name": "Pooja Iyer",
+      "age": 32,
+      "sex": "female",
+      "phone": "+91 98840 31920",
+      "email": "pooja.iyer@email.in",
+      "blood_type": "O-",
+      "bmi": 21.8,
+      "sbp": 116,
+      "dbp": 74,
+      "total_chol": 165,
+      "hdl_chol": 62,
+      "fasting_glucose": 86,
+      "hba1c": 5.1,
+      "serum_creatinine": 0.8,
+      "uacr": 15,
+      "smoker": false,
+      "diabetes": false,
+      "afib": false,
+      "history": [
+        {
+          "date": "2026-02-10",
+          "sbp": 114,
+          "glucose": 84,
+          "risk_note": "Optimal routine wellness screen."
+        },
+        {
+          "date": "2026-10-01",
+          "sbp": 116,
+          "glucose": 86,
+          "risk_note": "All vitals in ideal healthy range."
+        }
+      ]
+    }
+  },
+  "doctors": {
+    "doc-1": {
+      "id": "doc-1",
+      "name": "Dr. Rajesh Sharma, MD, DM",
+      "specialty": "Cardiology",
+      "specialty_code": "cardiology",
+      "title": "Chief of Preventive Cardiology & Heart Care",
+      "hospital": "Apollo Heart Institute, New Delhi",
+      "experience_years": 18,
+      "rating": 4.95,
+      "review_count": 342,
+      "avatar": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=256",
+      "available_slots": [
+        "Tomorrow at 09:30 AM (Urgent Reserved)",
+        "Tomorrow at 02:00 PM",
+        "Thursday at 11:15 AM"
+      ],
+      "bio": "Specializes in coronary artery disease prevention, blood pressure control, and cardiac rehabilitation."
+    },
+    "doc-2": {
+      "id": "doc-2",
+      "name": "Dr. Priya Nair, MD",
+      "specialty": "Endocrinology",
+      "specialty_code": "endocrinology",
+      "title": "Senior Consultant Diabetologist",
+      "hospital": "Max Center for Diabetes & Metabolic Care, Mumbai",
+      "experience_years": 14,
+      "rating": 4.92,
+      "review_count": 286,
+      "avatar": "https://images.unsplash.com/photo-1594824813511-309df5ff6bf9?auto=format&fit=crop&q=80&w=256",
+      "available_slots": [
+        "Today at 04:30 PM",
+        "Wednesday at 10:00 AM",
+        "Friday at 01:45 PM"
+      ],
+      "bio": "Specializes in reversing pre-diabetes, HbA1c control, and insulin resistance management."
+    },
+    "doc-3": {
+      "id": "doc-3",
+      "name": "Dr. Amitav Banerjee, MD, DM",
+      "specialty": "Nephrology",
+      "specialty_code": "nephrology",
+      "title": "Director of Renal Sciences & Kidney Care",
+      "hospital": "Fortis Kidney Institute, Kolkata",
+      "experience_years": 16,
+      "rating": 4.89,
+      "review_count": 194,
+      "avatar": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=256",
+      "available_slots": [
+        "Tomorrow at 10:15 AM",
+        "Thursday at 03:30 PM",
+        "Friday at 09:00 AM"
+      ],
+      "bio": "Specializes in diabetic nephropathy prevention, blood pressure-induced kidney strain, and renal preservation."
+    },
+    "doc-4": {
+      "id": "doc-4",
+      "name": "Dr. Sunita Deshmukh, MD, DM",
+      "specialty": "Neurology",
+      "specialty_code": "neurology",
+      "title": "Senior Neurologist & Stroke Care Lead",
+      "hospital": "Manipal Brain & Neuro Institute, Bengaluru",
+      "experience_years": 15,
+      "rating": 4.96,
+      "review_count": 310,
+      "avatar": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=256",
+      "available_slots": [
+        "Today at 03:00 PM (Priority)",
+        "Wednesday at 01:15 PM",
+        "Thursday at 04:00 PM"
+      ],
+      "bio": "Expert in cerebrovascular health, stroke prevention, and carotid blood flow monitoring."
+    }
+  },
+  "users": {},
+  "assessments": [
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 23.0,
+      "sex": "male",
+      "sbp": 123.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": false,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 23.0,
+      "patient_sex": "male",
+      "wellness_index": 84.0,
+      "primary_concern": {
+        "disease": "Type 2 Diabetes Mellitus",
+        "risk_score": 29.2,
+        "category": "Moderate (Pre-Diabetes Alert)",
+        "severity": "moderate",
+        "color": "amber",
+        "recommended_specialist": "Endocrinologist",
+        "specialty_code": "endocrinology",
+        "urgency": "Routine (30 Days)",
+        "drivers": [
+          {
+            "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+            "value": "6.1% HbA1c / 112 mg/dL",
+            "impact": 18.0,
+            "is_adverse": true,
+            "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+          },
+          {
+            "feature": "Body Mass Index (BMI)",
+            "value": "29.4 kg/m\u00b2",
+            "impact": 8.0,
+            "is_adverse": true,
+            "description": "Adiposity contributes significantly to peripheral insulin resistance."
+          },
+          {
+            "feature": "Physical Activity Level",
+            "value": "Sufficient (>= 150m/wk)",
+            "impact": -8.0,
+            "is_adverse": false,
+            "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+          },
+          {
+            "feature": "Family History",
+            "value": "Negative",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "No immediate familial predisposition."
+          }
+        ],
+        "model_confidence": 94.1,
+        "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 5.2,
+          "category": "Low Risk",
+          "severity": "low",
+          "color": "emerald",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Routine (Annual)",
+          "drivers": [
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "23 yrs",
+              "impact": -12.4,
+              "is_adverse": false,
+              "description": "Cumulative cardiovascular exposure baseline for age 23."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            },
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Non-Smoker",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "Zero tobacco exposure preserves vascular compliance."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "123 mmHg",
+              "impact": 1.0,
+              "is_adverse": false,
+              "description": "Systolic pressure is within optimal range."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 29.2,
+          "category": "Moderate (Pre-Diabetes Alert)",
+          "severity": "moderate",
+          "color": "amber",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Routine (30 Days)",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 2.4,
+          "category": "Low Risk",
+          "severity": "low",
+          "color": "emerald",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Routine Follow-up",
+          "drivers": [
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            },
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "123 mmHg",
+              "impact": 1.4,
+              "is_adverse": false,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 27.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 87.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "87.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 23.0yo male, evaluated with Moderate (Pre-Diabetes Alert) for Type 2 Diabetes Mellitus (Model Predicted Risk Score: 29.2%). Triage Urgency: Routine (30 Days).",
+        "background": "Biomarker baseline: Blood Pressure 123.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Non-smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (ADA Risk Engine + FINDRISC Tree Classifier) indicates highest vulnerability in Type 2 Diabetes Mellitus. Primary pathophysiological drivers identified: Glycemic Markers (HbA1c & Fasting Glucose) (6.1% HbA1c / 112 mg/dL, impact +18.0%), Body Mass Index (BMI) (29.4 kg/m\u00b2, impact +8.0%), Physical Activity Level (Sufficient (>= 150m/wk), impact -8.0%). Model prediction confidence: 94.1%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Endocrinologist.\n2. Recommended triage interval: Routine (30 Days).\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-1f75568b",
+      "timestamp": "2026-11-03T11:40:02.049928"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 23.0,
+      "sex": "male",
+      "sbp": 123.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": false,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 23.0,
+      "patient_sex": "male",
+      "wellness_index": 84.0,
+      "primary_concern": {
+        "disease": "Type 2 Diabetes Mellitus",
+        "risk_score": 29.2,
+        "category": "Moderate (Pre-Diabetes Alert)",
+        "severity": "moderate",
+        "color": "amber",
+        "recommended_specialist": "Endocrinologist",
+        "specialty_code": "endocrinology",
+        "urgency": "Routine (30 Days)",
+        "drivers": [
+          {
+            "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+            "value": "6.1% HbA1c / 112 mg/dL",
+            "impact": 18.0,
+            "is_adverse": true,
+            "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+          },
+          {
+            "feature": "Body Mass Index (BMI)",
+            "value": "29.4 kg/m\u00b2",
+            "impact": 8.0,
+            "is_adverse": true,
+            "description": "Adiposity contributes significantly to peripheral insulin resistance."
+          },
+          {
+            "feature": "Physical Activity Level",
+            "value": "Sufficient (>= 150m/wk)",
+            "impact": -8.0,
+            "is_adverse": false,
+            "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+          },
+          {
+            "feature": "Family History",
+            "value": "Negative",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "No immediate familial predisposition."
+          }
+        ],
+        "model_confidence": 94.1,
+        "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 5.2,
+          "category": "Low Risk",
+          "severity": "low",
+          "color": "emerald",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Routine (Annual)",
+          "drivers": [
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "23 yrs",
+              "impact": -12.4,
+              "is_adverse": false,
+              "description": "Cumulative cardiovascular exposure baseline for age 23."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            },
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Non-Smoker",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "Zero tobacco exposure preserves vascular compliance."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "123 mmHg",
+              "impact": 1.0,
+              "is_adverse": false,
+              "description": "Systolic pressure is within optimal range."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 29.2,
+          "category": "Moderate (Pre-Diabetes Alert)",
+          "severity": "moderate",
+          "color": "amber",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Routine (30 Days)",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 2.4,
+          "category": "Low Risk",
+          "severity": "low",
+          "color": "emerald",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Routine Follow-up",
+          "drivers": [
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            },
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "123 mmHg",
+              "impact": 1.4,
+              "is_adverse": false,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 27.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 87.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "87.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 23.0yo male, evaluated with Moderate (Pre-Diabetes Alert) for Type 2 Diabetes Mellitus (Model Predicted Risk Score: 29.2%). Triage Urgency: Routine (30 Days).",
+        "background": "Biomarker baseline: Blood Pressure 123.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Non-smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (ADA Risk Engine + FINDRISC Tree Classifier) indicates highest vulnerability in Type 2 Diabetes Mellitus. Primary pathophysiological drivers identified: Glycemic Markers (HbA1c & Fasting Glucose) (6.1% HbA1c / 112 mg/dL, impact +18.0%), Body Mass Index (BMI) (29.4 kg/m\u00b2, impact +8.0%), Physical Activity Level (Sufficient (>= 150m/wk), impact -8.0%). Model prediction confidence: 94.1%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Endocrinologist.\n2. Recommended triage interval: Routine (30 Days).\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-2cf1a8f0",
+      "timestamp": "2026-11-03T11:40:00.347371"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 23.0,
+      "sex": "male",
+      "sbp": 123.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 23.0,
+      "patient_sex": "male",
+      "wellness_index": 81.5,
+      "primary_concern": {
+        "disease": "Type 2 Diabetes Mellitus",
+        "risk_score": 29.2,
+        "category": "Moderate (Pre-Diabetes Alert)",
+        "severity": "moderate",
+        "color": "amber",
+        "recommended_specialist": "Endocrinologist",
+        "specialty_code": "endocrinology",
+        "urgency": "Routine (30 Days)",
+        "drivers": [
+          {
+            "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+            "value": "6.1% HbA1c / 112 mg/dL",
+            "impact": 18.0,
+            "is_adverse": true,
+            "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+          },
+          {
+            "feature": "Body Mass Index (BMI)",
+            "value": "29.4 kg/m\u00b2",
+            "impact": 8.0,
+            "is_adverse": true,
+            "description": "Adiposity contributes significantly to peripheral insulin resistance."
+          },
+          {
+            "feature": "Physical Activity Level",
+            "value": "Sufficient (>= 150m/wk)",
+            "impact": -8.0,
+            "is_adverse": false,
+            "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+          },
+          {
+            "feature": "Family History",
+            "value": "Negative",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "No immediate familial predisposition."
+          }
+        ],
+        "model_confidence": 94.1,
+        "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 10.8,
+          "category": "Borderline / Moderate",
+          "severity": "moderate",
+          "color": "amber",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Within 14 Days",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "23 yrs",
+              "impact": -12.4,
+              "is_adverse": false,
+              "description": "Cumulative cardiovascular exposure baseline for age 23."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "123 mmHg",
+              "impact": 1.0,
+              "is_adverse": false,
+              "description": "Systolic pressure is within optimal range."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 29.2,
+          "category": "Moderate (Pre-Diabetes Alert)",
+          "severity": "moderate",
+          "color": "amber",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Routine (30 Days)",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 6.8,
+          "category": "Low Risk",
+          "severity": "low",
+          "color": "emerald",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Routine Follow-up",
+          "drivers": [
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            },
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "123 mmHg",
+              "impact": 1.4,
+              "is_adverse": false,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 27.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 87.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "87.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 23.0yo male, evaluated with Moderate (Pre-Diabetes Alert) for Type 2 Diabetes Mellitus (Model Predicted Risk Score: 29.2%). Triage Urgency: Routine (30 Days).",
+        "background": "Biomarker baseline: Blood Pressure 123.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (ADA Risk Engine + FINDRISC Tree Classifier) indicates highest vulnerability in Type 2 Diabetes Mellitus. Primary pathophysiological drivers identified: Glycemic Markers (HbA1c & Fasting Glucose) (6.1% HbA1c / 112 mg/dL, impact +18.0%), Body Mass Index (BMI) (29.4 kg/m\u00b2, impact +8.0%), Physical Activity Level (Sufficient (>= 150m/wk), impact -8.0%). Model prediction confidence: 94.1%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Endocrinologist.\n2. Recommended triage interval: Routine (30 Days).\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-ba31e0ba",
+      "timestamp": "2026-11-03T11:39:43.956232"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-9c0f005c",
+      "timestamp": "2026-11-03T11:39:27.573390"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 120.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 120 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 120.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-439be66e",
+      "timestamp": "2026-11-03T11:37:51.656569"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-29c4aafd",
+      "timestamp": "2026-11-03T11:37:47.385290"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-5e1949e0",
+      "timestamp": "2026-11-03T11:37:42.141681"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-573c9b72",
+      "timestamp": "2026-11-03T11:33:26.200251"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-353d2e0a",
+      "timestamp": "2026-11-03T11:33:23.339696"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-f45f85d5",
+      "timestamp": "2026-11-03T11:33:19.160557"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-34fc1dd6",
+      "timestamp": "2026-11-03T11:30:18.940988"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-9ed3f687",
+      "timestamp": "2026-11-03T11:27:25.153253"
+    },
+    {
+      "patient_id": "pat-1",
+      "name": "Ramesh Patel",
+      "age": 58.0,
+      "sex": "male",
+      "sbp": 158.0,
+      "dbp": 96.0,
+      "fasting_glucose": 112.0,
+      "hba1c": 6.1,
+      "total_chol": 248.0,
+      "hdl_chol": 38.0,
+      "bmi": 29.4,
+      "serum_creatinine": 1.2,
+      "uacr": 45.0,
+      "smoker": true,
+      "diabetes": false,
+      "bp_treated": false,
+      "physical_activity": true,
+      "family_history": false,
+      "afib": false,
+      "prev_tia": false,
+      "patient_name": "Ramesh Patel",
+      "patient_age": 58.0,
+      "patient_sex": "male",
+      "wellness_index": 47.7,
+      "primary_concern": {
+        "disease": "Cerebrovascular Stroke Risk",
+        "risk_score": 67.0,
+        "category": "Critical Cerebrovascular Risk",
+        "severity": "critical",
+        "color": "rose",
+        "recommended_specialist": "Neurologist",
+        "specialty_code": "neurology",
+        "urgency": "Urgent Same-Week",
+        "drivers": [
+          {
+            "feature": "Systolic Blood Pressure Strain",
+            "value": "158 mmHg",
+            "impact": 17.1,
+            "is_adverse": true,
+            "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+          },
+          {
+            "feature": "Prior TIA or Stroke History",
+            "value": "None Reported",
+            "impact": -5.0,
+            "is_adverse": false,
+            "description": "No past neurological ischemic events."
+          },
+          {
+            "feature": "Atrial Fibrillation / Arrhythmia",
+            "value": "Absent",
+            "impact": -4.0,
+            "is_adverse": false,
+            "description": "Normal sinus rhythm."
+          }
+        ],
+        "model_confidence": 91.8,
+        "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+      },
+      "assessments": {
+        "cardiovascular": {
+          "disease": "Cardiovascular Disease (ASCVD)",
+          "risk_score": 59.3,
+          "category": "Critical High Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Cardiologist",
+          "specialty_code": "cardiology",
+          "urgency": "Urgent (Within 48h)",
+          "drivers": [
+            {
+              "feature": "Tobacco Use / Smoking",
+              "value": "Active Smoker",
+              "impact": 22.5,
+              "is_adverse": true,
+              "description": "Active smoking accelerates arterial endothelial damage and plaque vulnerability."
+            },
+            {
+              "feature": "Cholesterol Ratio (TC/HDL)",
+              "value": "6.53",
+              "impact": 13.6,
+              "is_adverse": true,
+              "description": "Ratio of total (248) to protective HDL (38) indicates atherogenic risk."
+            },
+            {
+              "feature": "Chronological Age",
+              "value": "58 yrs",
+              "impact": 13.1,
+              "is_adverse": true,
+              "description": "Cumulative cardiovascular exposure baseline for age 58."
+            },
+            {
+              "feature": "Systolic Blood Pressure",
+              "value": "158 mmHg",
+              "impact": 13.0,
+              "is_adverse": true,
+              "description": "Systolic pressure is elevated (+stage 1/2 hypertension)."
+            },
+            {
+              "feature": "Metabolic Status (Diabetes)",
+              "value": "Non-Diabetic",
+              "impact": -6.0,
+              "is_adverse": false,
+              "description": "Normal glycemic baseline."
+            }
+          ],
+          "model_confidence": 92.4,
+          "algorithm": "Calibrated ACC/AHA ASCVD Ensemble + SHAP Attribution"
+        },
+        "diabetes": {
+          "disease": "Type 2 Diabetes Mellitus",
+          "risk_score": 50.0,
+          "category": "High Risk",
+          "severity": "high",
+          "color": "orange",
+          "recommended_specialist": "Endocrinologist",
+          "specialty_code": "endocrinology",
+          "urgency": "Within 7-14 Days",
+          "drivers": [
+            {
+              "feature": "Glycemic Markers (HbA1c & Fasting Glucose)",
+              "value": "6.1% HbA1c / 112 mg/dL",
+              "impact": 18.0,
+              "is_adverse": true,
+              "description": "Marker in pre-diabetic or diabetic range indicating beta-cell exhaustion."
+            },
+            {
+              "feature": "Body Mass Index (BMI)",
+              "value": "29.4 kg/m\u00b2",
+              "impact": 8.0,
+              "is_adverse": true,
+              "description": "Adiposity contributes significantly to peripheral insulin resistance."
+            },
+            {
+              "feature": "Physical Activity Level",
+              "value": "Sufficient (>= 150m/wk)",
+              "impact": -8.0,
+              "is_adverse": false,
+              "description": "Muscle contractions stimulate insulin-independent glucose uptake."
+            },
+            {
+              "feature": "Family History",
+              "value": "Negative",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "No immediate familial predisposition."
+            }
+          ],
+          "model_confidence": 94.1,
+          "algorithm": "ADA Risk Engine + FINDRISC Tree Classifier"
+        },
+        "stroke": {
+          "disease": "Cerebrovascular Stroke Risk",
+          "risk_score": 67.0,
+          "category": "Critical Cerebrovascular Risk",
+          "severity": "critical",
+          "color": "rose",
+          "recommended_specialist": "Neurologist",
+          "specialty_code": "neurology",
+          "urgency": "Urgent Same-Week",
+          "drivers": [
+            {
+              "feature": "Systolic Blood Pressure Strain",
+              "value": "158 mmHg",
+              "impact": 17.1,
+              "is_adverse": true,
+              "description": "High arterial pressure causes microvascular remodeling and hemorrhagic/ischemic risk."
+            },
+            {
+              "feature": "Prior TIA or Stroke History",
+              "value": "None Reported",
+              "impact": -5.0,
+              "is_adverse": false,
+              "description": "No past neurological ischemic events."
+            },
+            {
+              "feature": "Atrial Fibrillation / Arrhythmia",
+              "value": "Absent",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal sinus rhythm."
+            }
+          ],
+          "model_confidence": 91.8,
+          "algorithm": "Framingham Stroke Profile + Neurological Risk Predictor"
+        },
+        "ckd": {
+          "disease": "Chronic Kidney Disease (CKD)",
+          "risk_score": 33.0,
+          "category": "Stage 3a (Mild-Moderate CKD)",
+          "severity": "moderate",
+          "color": "amber",
+          "egfr": 70.1,
+          "recommended_specialist": "Nephrologist",
+          "specialty_code": "nephrology",
+          "urgency": "Routine Renal Panel (6 Months)",
+          "drivers": [
+            {
+              "feature": "Albuminuria (uACR)",
+              "value": "45.0 mg/g",
+              "impact": 14.0,
+              "is_adverse": true,
+              "description": "Urine albumin-creatinine ratio indicates microalbuminuria."
+            },
+            {
+              "feature": "Estimated GFR (eGFR)",
+              "value": "70.1 mL/min/1.73m\u00b2",
+              "impact": -12.0,
+              "is_adverse": false,
+              "description": "Glomerular filtration rate is healthy and filtering adequately."
+            },
+            {
+              "feature": "Serum Creatinine",
+              "value": "1.2 mg/dL",
+              "impact": -4.0,
+              "is_adverse": false,
+              "description": "Normal filtration clearance."
+            }
+          ],
+          "model_confidence": 93.7,
+          "algorithm": "CKD-EPI 2021 Formula + KDIGO Risk Matrix"
+        }
+      },
+      "sbar_note": {
+        "situation": "VITALSYN AI triage flag: Ramesh Patel, 58.0yo male, evaluated with Critical Cerebrovascular Risk for Cerebrovascular Stroke Risk (Model Predicted Risk Score: 67.0%). Triage Urgency: Urgent Same-Week.",
+        "background": "Biomarker baseline: Blood Pressure 158.0/96.0 mmHg, Fasting Glucose 112.0 mg/dL, Total Cholesterol 248.0 mg/dL. Tobacco status: Active Smoker. Patient has active monitoring via VITALSYN predictive preventive portal.",
+        "assessment": "Algorithmic risk stratification (Framingham Stroke Profile + Neurological Risk Predictor) indicates highest vulnerability in Cerebrovascular Stroke Risk. Primary pathophysiological drivers identified: Systolic Blood Pressure Strain (158 mmHg, impact +17.1%), Prior TIA or Stroke History (None Reported, impact -5.0%), Atrial Fibrillation / Arrhythmia (Absent, impact -4.0%). Model prediction confidence: 91.8%.",
+        "recommendation": "1. Immediate referral scheduled with Specialist: Neurologist.\n2. Recommended triage interval: Urgent Same-Week.\n3. Clinical protocol: Verify laboratory lipid panel, perform 12-lead ECG/echocardiogram if indicated, and initiate targeted pharmacological intervention and counterfactual lifestyle plan."
+      },
+      "id": "eval-8b2ac5b2",
+      "timestamp": "2026-11-03T11:27:10.341598"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt-1fa774",
+      "patient_id": "pat-1",
+      "patient_name": "Ramesh Patel",
+      "doctor_id": "doc-2",
+      "doctor_name": "Dr. Priya Nair, MD",
+      "specialty": "Endocrinology",
+      "slot": "Thursday at 11:15 AM",
+      "status": "Waiting in Queue",
+      "urgency": "Routine (30 Days)",
+      "risk_category": "Moderate (Pre-Diabetes Alert)",
+      "risk_score": 29.0,
+      "disease": "Type 2 Diabetes Mellitus",
+      "triage_reason": "Elevated SBP 123 mmHg. Clinical OPD intake requested.",
+      "sbar_note": {
+        "situation": "Ramesh Patel evaluated with elevated SBP (123 mmHg). Primary risk: 29%.",
+        "recommendation": "Conduct clinical evaluation and cardiovascular risk management protocol."
+      },
+      "created_at": "2026-11-03 11:40"
+    },
+    {
+      "id": "apt-a1cbb5",
+      "patient_id": "pat-1",
+      "patient_name": "Ramesh Patel",
+      "doctor_id": "doc-4",
+      "doctor_name": "Dr. Sunita Deshmukh, MD, DM",
+      "specialty": "Neurology",
+      "slot": "Tomorrow at 09:30 AM (Urgent Reserved)",
+      "status": "Waiting in Queue",
+      "urgency": "Urgent Same-Week",
+      "risk_category": "Critical Cerebrovascular Risk",
+      "risk_score": 67.0,
+      "disease": "Cerebrovascular Stroke Risk",
+      "triage_reason": "Elevated SBP 158 mmHg. Clinical OPD intake requested.",
+      "sbar_note": {
+        "situation": "Ramesh Patel evaluated with elevated SBP (158 mmHg). Primary risk: 67%.",
+        "recommendation": "Conduct clinical evaluation and cardiovascular risk management protocol."
+      },
+      "created_at": "2026-11-03 11:38"
+    },
+    {
+      "id": "apt-101",
+      "patient_id": "pat-1",
+      "patient_name": "Ramesh Patel",
+      "doctor_id": "doc-1",
+      "doctor_name": "Dr. Rajesh Sharma, MD, DM",
+      "specialty": "Cardiology",
+      "slot": "Tomorrow at 09:30 AM",
+      "status": "Waiting in Queue",
+      "urgency": "Urgent Follow-up",
+      "risk_category": "High Risk",
+      "risk_score": 74,
+      "disease": "Heart Disease (ASCVD)",
+      "triage_reason": "High blood pressure (158/96 mmHg) and active smoking.",
+      "created_at": "2026-11-03 11:27"
+    },
+    {
+      "id": "apt-102",
+      "patient_id": "pat-2",
+      "patient_name": "Ananya Sen",
+      "doctor_id": "doc-2",
+      "doctor_name": "Dr. Priya Nair, MD",
+      "specialty": "Endocrinology",
+      "slot": "Wednesday at 10:00 AM",
+      "status": "Confirmed",
+      "urgency": "Moderate Follow-up",
+      "risk_category": "Moderate Risk",
+      "risk_score": 42,
+      "disease": "Type 2 Diabetes",
+      "triage_reason": "Elevated HbA1c (6.7%) and fasting glucose 128 mg/dL.",
+      "created_at": "2026-11-02 11:27"
+    }
+  ],
+  "last_updated": "2026-11-03T11:40:29.877488"
+}

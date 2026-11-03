@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VITALSYN — Clinical Health Platform</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lavender: {
+              50: '#fbf9fe',
+              100: '#f4effc',
+              200: '#e9def8',
+              300: '#d7c5f3',
+              400: '#bf9ff0',
+              500: '#a374ea',
+              600: '#7c4dff',
+              700: '#673ab7',
+              800: '#512da8',
+              900: '#311b92',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#fcfbfe] text-[#1a162b] min-h-screen flex flex-col font-sans antialiased">
+
+  <!-- ======================================================== -->
+  <!-- 1. INDIVIDUAL LOGIN SCREEN (Active by default on launch) -->
+  <!-- ======================================================== -->
+  <div id="screen-login" class="min-h-screen w-full flex items-center justify-center p-4 bg-[#fcfbfe]">
+    <div class="card-clean bg-white max-w-lg w-full p-8 shadow-xl border border-lavender-200 space-y-6">
+      
+      <!-- Clinic Brand Header -->
+      <div class="text-center space-y-2 pb-2 border-b border-lavender-100">
+        <div class="w-12 h-12 rounded-xl bg-lavender-700 mx-auto flex items-center justify-center text-white shadow-md shadow-lavender-700/20">
+          <i data-lucide="activity" class="w-6 h-6 stroke-[2.2]"></i>
+        </div>
+        <h1 class="text-2xl font-black text-slate-900 tracking-tight">VITAL<span class="text-lavender-700">SYN</span></h1>
+        <p class="text-xs text-slate-500 font-medium">Predictive & Preventive Healthcare Ecosystem • Secure Sign In</p>
+      </div>
+
+      <!-- Individual Login Role Selector Tabs -->
+      <div class="grid grid-cols-3 gap-1 bg-lavender-50 p-1 rounded-lg text-xs font-semibold border border-lavender-200/80">
+        <button onclick="setLoginTab('patient')" id="login-tab-patient" class="portal-pill py-2 rounded-md active text-center">
+          Patient
+        </button>
+        <button onclick="setLoginTab('doctor')" id="login-tab-doctor" class="portal-pill py-2 rounded-md text-center">
+          Physician
+        </button>
+        <button onclick="setLoginTab('admin')" id="login-tab-admin" class="portal-pill py-2 rounded-md text-center">
+          Hospital Admin
+        </button>
+      </div>
+
+      <!-- FORM A: Patient Individual Login -->
+      <form id="form-login-patient" class="space-y-4" onsubmit="event.preventDefault(); submitPatientLogin();">
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Patient UHID or Mobile Number</label>
+          <input type="text" id="login-pat-id" value="AP-94021" class="w-full bg-slate-50 border border-slate-200 rounded-md px-3 py-2 text-xs text-slate-900 font-mono font-medium focus:outline-none focus:border-lavender-600 focus:bg-white transition" placeholder="e.g. AP-94021 or +91 98201 44812">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Security PIN / Password</label>
+          <input type="password" value="••••••••" class="w-full bg-slate-50 border border-slate-200 rounded-md px-3 py-2 text-xs text-slate-900 font-mono focus:outline-none focus:border-lavender-600 focus:bg-white transition">
+        </div>
+
+        <!-- 1-Click Fast Fill Patient Profiles -->
+        <div class="pt-1">
+          <div class="text-[11px] text-slate-500 font-medium mb-1.5">Quick Demo Fill:</div>
+          <div class="flex flex-wrap gap-1.5">
+            <button type="button" onclick="autofillPatient('pat-1')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Ramesh Patel (High Heart Risk)
+            </button>
+            <button type="button" onclick="autofillPatient('pat-2')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Ananya Sen (Diabetes)
+            </button>
+            <button type="button" onclick="autofillPatient('pat-3')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Vikram Malhotra (Kidney)
+            </button>
+            <button type="button" onclick="autofillPatient('pat-4')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Pooja Iyer (Healthy)
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 bg-lavender-700 hover:bg-lavender-800 text-white font-semibold text-xs rounded-lg shadow-sm transition">
+          Sign In to Patient Portal
+        </button>
+      </form>
+
+      <!-- FORM B: Doctor Individual Login -->
+      <form id="form-login-doctor" class="space-y-4 hidden" onsubmit="event.preventDefault(); submitDoctorLogin();">
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Physician ID / Medical Reg No</label>
+          <input type="text" id="login-doc-id" value="MCI-28491 (Dr. Rajesh Sharma)" class="w-full bg-slate-50 border border-slate-200 rounded-md px-3 py-2 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600 focus:bg-white transition" placeholder="e.g. MCI-28491">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Hospital Staff Password</label>
+          <input type="password" value="••••••••" class="w-full bg-slate-50 border border-slate-200 rounded-md px-3 py-2 text-xs text-slate-900 font-mono focus:outline-none focus:border-lavender-600 focus:bg-white transition">
+        </div>
+
+        <!-- 1-Click Fast Fill Doctor Profiles -->
+        <div class="pt-1">
+          <div class="text-[11px] text-slate-500 font-medium mb-1.5">Quick Demo Fill:</div>
+          <div class="flex flex-wrap gap-1.5">
+            <button type="button" onclick="autofillDoctor('doc-1')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Dr. Rajesh Sharma (Cardiology)
+            </button>
+            <button type="button" onclick="autofillDoctor('doc-2')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Dr. Priya Nair (Endocrinology)
+            </button>
+            <button type="button" onclick="autofillDoctor('doc-3')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Dr. Amitav Banerjee (Nephrology)
+            </button>
+            <button type="button" onclick="autofillDoctor('doc-4')" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-lavender-100 text-slate-800 text-[11px] font-medium transition border border-slate-200">
+              Dr. Sunita Deshmukh (Neurology)
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 bg-lavender-700 hover:bg-lavender-800 text-white font-semibold text-xs rounded-lg shadow-sm transition">
+          Sign In to Clinician Dashboard
+        </button>
+      </form>
+
+      <!-- FORM C: Admin Individual Login -->
+      <form id="form-login-admin" class="space-y-4 hidden" onsubmit="event.preventDefault(); submitAdminLogin();">
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Administrative Staff ID</label>
+          <input type="text" id="login-admin-id" value="ADMIN-9012 (Dr. Arvind Venkataraman)" class="w-full bg-slate-50 border border-slate-200 rounded-md px-3 py-2 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600 focus:bg-white transition">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Operations Security Key</label>
+          <input type="password" value="••••••••" class="w-full bg-slate-50 border border-slate-200 rounded-md px-3 py-2 text-xs text-slate-900 font-mono focus:outline-none focus:border-lavender-600 focus:bg-white transition">
+        </div>
+
+        <button type="submit" class="w-full py-2.5 bg-lavender-700 hover:bg-lavender-800 text-white font-semibold text-xs rounded-lg shadow-sm transition">
+          Sign In to Hospital Operations
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 2. MAIN APPLICATION CONTENT (Hidden until logged in)     -->
+  <!-- ======================================================== -->
+  <div id="main-app-content" class="hidden min-h-screen flex flex-col">
+
+    <!-- Top Application Bar -->
+    <header class="bg-white border-b border-lavender-200 sticky top-0 z-40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-15">
+          
+          <!-- Logo -->
+          <div class="flex items-center space-x-2.5">
+            <div class="w-8 h-8 rounded-lg bg-lavender-700 flex items-center justify-center text-white shadow-xs">
+              <i data-lucide="activity" class="w-4 h-4 stroke-[2.2]"></i>
+            </div>
+            <div>
+              <div class="flex items-center space-x-1.5">
+                <span class="text-base font-bold tracking-tight text-slate-900">VITAL<span class="text-lavender-700">SYN</span></span>
+                <span id="header-role-badge" class="text-[10px] font-semibold bg-lavender-50 text-lavender-800 px-2 py-0.5 rounded border border-lavender-200">Patient Portal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role Navigation Segmented Control -->
+          <nav class="flex items-center bg-lavender-50 p-1 rounded-lg text-xs font-medium border border-lavender-200/80">
+            <button onclick="switchDashboard('patient')" id="tab-patient" class="portal-pill px-3 py-1 rounded-md flex items-center space-x-1.5 active">
+              <i data-lucide="user" class="w-3.5 h-3.5"></i>
+              <span id="nav-patient-label">Patient</span>
+            </button>
+            <button onclick="switchDashboard('doctor')" id="tab-doctor" class="portal-pill px-3 py-1 rounded-md flex items-center space-x-1.5 relative">
+              <i data-lucide="stethoscope" class="w-3.5 h-3.5"></i>
+              <span id="nav-doctor-label">Physician</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500 absolute top-1 right-1"></span>
+            </button>
+            <button onclick="switchDashboard('admin')" id="tab-admin" class="portal-pill px-3 py-1 rounded-md flex items-center space-x-1.5">
+              <i data-lucide="building" class="w-3.5 h-3.5"></i>
+              <span>Operations</span>
+            </button>
+          </nav>
+
+          <!-- Current Logged In Profile & Sign Out -->
+          <div class="flex items-center space-x-3">
+            <div class="hidden sm:block text-right">
+              <div class="text-xs font-semibold text-slate-900" id="current-user-name">Ramesh Patel</div>
+              <div class="text-[10px] text-slate-500 font-mono" id="current-user-role">UHID: AP-94021</div>
+            </div>
+            <button onclick="performSignOut()" class="text-xs font-medium text-slate-600 hover:text-rose-700 bg-slate-50 hover:bg-rose-50 px-2.5 py-1.5 rounded-md border border-slate-200 flex items-center space-x-1.5 transition">
+              <i data-lucide="log-out" class="w-3.5 h-3.5 text-slate-500"></i>
+              <span>Sign Out</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col space-y-2 max-w-sm"></div>
+
+    <!-- MAIN DASHBOARDS CONTAINER -->
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
+
+      <!-- ======================================================== -->
+      <!-- DASHBOARD 1: PATIENT DASHBOARD                           -->
+      <!-- ======================================================== -->
+      <div id="dash-patient" class="dashboard-view space-y-5">
+
+        <!-- Patient Demographics Card -->
+        <div class="card-clean p-5 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center space-x-2">
+              <h2 class="text-lg font-bold text-slate-900" id="patient-greeting">Ramesh Patel</h2>
+              <span class="text-[11px] font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded" id="patient-uhid-badge">UHID: AP-94021</span>
+              <span class="text-[11px] text-slate-500" id="patient-demographics-text">58 Yrs / Male • Blood Group B+</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Assigned Consultant: Dr. Rajesh Sharma, MD, DM (Apollo Hospitals) • Record status: Active</p>
+          </div>
+
+          <!-- Quick Switch Among Patients -->
+          <div class="flex items-center space-x-1.5 text-xs shrink-0">
+            <span class="text-slate-400 text-[11px]">Switch Patient:</span>
+            <button onclick="autofillPatient('pat-1'); submitPatientLogin();" class="px-2 py-1 rounded bg-slate-100 text-slate-800 text-[11px] font-medium hover:bg-slate-200 transition">Ramesh</button>
+            <button onclick="autofillPatient('pat-2'); submitPatientLogin();" class="px-2 py-1 rounded bg-slate-100 text-slate-800 text-[11px] font-medium hover:bg-slate-200 transition">Ananya</button>
+            <button onclick="autofillPatient('pat-3'); submitPatientLogin();" class="px-2 py-1 rounded bg-slate-100 text-slate-800 text-[11px] font-medium hover:bg-slate-200 transition">Vikram</button>
+            <button onclick="autofillPatient('pat-4'); submitPatientLogin();" class="px-2 py-1 rounded bg-slate-100 text-slate-800 text-[11px] font-medium hover:bg-slate-200 transition">Pooja</button>
+          </div>
+        </div>
+
+        <!-- Grid: Left Inputs | Right Health Evaluation -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+
+          <!-- Left: Clinical Input Form (5 cols) -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="card-clean p-5 bg-white">
+              <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2 border-b border-lavender-100 pb-2.5">
+                <i data-lucide="sliders" class="w-3.5 h-3.5 text-lavender-700"></i>
+                <span>Clinical Biomarkers & Vitals</span>
+              </h3>
+
+              <form id="biomarker-form" class="mt-3.5 space-y-3" onsubmit="event.preventDefault(); runPrediction();">
+                <div class="grid grid-cols-3 gap-2">
+                  <div class="col-span-2">
+                    <label class="block text-[11px] font-medium text-slate-600 mb-1">Patient Name</label>
+                    <input type="text" id="inp-name" value="Ramesh Patel" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600">
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-medium text-slate-600 mb-1">Age</label>
+                    <input type="number" id="inp-age" value="58" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600">
+                  </div>
+                </div>
+
+                <!-- Blood Pressure -->
+                <div>
+                  <label class="block text-[11px] font-medium text-slate-700 mb-1">Blood Pressure (Systolic / Diastolic mmHg)</label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="relative">
+                      <input type="number" id="inp-sbp" value="158" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:border-lavender-600">
+                      <span class="absolute right-2 top-2 text-[10px] text-slate-400">SBP</span>
+                    </div>
+                    <div class="relative">
+                      <input type="number" id="inp-dbp" value="96" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:border-lavender-600">
+                      <span class="absolute right-2 top-2 text-[10px] text-slate-400">DBP</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sugar & Cholesterol -->
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <label class="block text-[11px] font-medium text-slate-700 mb-1">Fasting Glucose (mg/dL)</label>
+                    <input type="number" id="inp-fasting-glucose" value="112" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600">
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-medium text-slate-700 mb-1">Total Cholesterol (mg/dL)</label>
+                    <input type="number" id="inp-total-chol" value="248" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <label class="block text-[11px] font-medium text-slate-700 mb-1">HDL Cholesterol (mg/dL)</label>
+                    <input type="number" id="inp-hdl-chol" value="38" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600">
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-medium text-slate-700 mb-1">Body Mass Index (kg/m²)</label>
+                    <input type="number" step="0.1" id="inp-bmi" value="29.4" class="w-full bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-lavender-600">
+                  </div>
+                </div>
+
+                <!-- Comorbidities -->
+                <div class="pt-2 border-t border-slate-100 space-y-1.5">
+                  <label class="flex items-center space-x-2 text-xs font-medium text-slate-700 cursor-pointer">
+                    <input type="checkbox" id="inp-smoker" checked class="w-3.5 h-3.5 rounded text-lavender-700 focus:ring-0">
+                    <span>Tobacco Smoker</span>
+                  </label>
+                  <label class="flex items-center space-x-2 text-xs font-medium text-slate-700 cursor-pointer">
+                    <input type="checkbox" id="inp-diabetes" class="w-3.5 h-3.5 rounded text-lavender-700 focus:ring-0">
+                    <span>Diagnosed Type 2 Diabetes</span>
+                  </label>
+                </div>
+
+                <!-- Auxiliary inputs -->
+                <input type="hidden" id="inp-sex" value="male">
+                <input type="hidden" id="inp-hba1c" value="6.1">
+                <input type="hidden" id="inp-creatinine" value="1.2">
+                <input type="hidden" id="inp-uacr" value="45">
+                <input type="hidden" id="inp-afib" value="false">
+                <input type="hidden" id="inp-active" value="true">
+
+                <button type="submit" id="btn-run-prediction" class="w-full py-2 bg-lavender-700 hover:bg-lavender-800 text-white font-semibold text-xs rounded-md shadow-xs transition">
+                  Recalculate Clinical Risk
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right: Multi-Organ Evaluation & XAI (7 cols) -->
+          <div class="lg:col-span-7 space-y-4">
+
+            <!-- 4 Clinical Risk Cards -->
+            <div class="grid grid-cols-2 gap-3">
+              
+              <div class="card-clean p-4 bg-white border-l-4 border-l-rose-500">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="font-semibold text-slate-900">Cardiovascular (ASCVD)</span>
+                  <span id="cvd-badge" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-50 text-rose-700 border border-rose-200">High Risk</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-slate-900 font-mono" id="cvd-score">74%</div>
+                <div class="mt-1.5 w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div id="cvd-bar" class="bg-rose-500 h-full rounded-full" style="width: 74%;"></div>
+                </div>
+                <div class="text-[11px] text-slate-500 mt-1">10-Year ACC/AHA Cohort</div>
+              </div>
+
+              <div class="card-clean p-4 bg-white border-l-4 border-l-amber-500">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="font-semibold text-slate-900">Type 2 Diabetes</span>
+                  <span id="diabetes-badge" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200">Moderate</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-slate-900 font-mono" id="diabetes-score">42%</div>
+                <div class="mt-1.5 w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div id="diabetes-bar" class="bg-amber-500 h-full rounded-full" style="width: 42%;"></div>
+                </div>
+                <div class="text-[11px] text-slate-500 mt-1">ADA FINDRISC Score</div>
+              </div>
+
+              <div class="card-clean p-4 bg-white border-l-4 border-l-indigo-500">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="font-semibold text-slate-900">Cerebrovascular Stroke</span>
+                  <span id="stroke-badge" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Moderate</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-slate-900 font-mono" id="stroke-score">23%</div>
+                <div class="mt-1.5 w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div id="stroke-bar" class="bg-indigo-500 h-full rounded-full" style="width: 23%;"></div>
+                </div>
+                <div class="text-[11px] text-slate-500 mt-1">Framingham Stroke Profile</div>
+              </div>
+
+              <div class="card-clean p-4 bg-white border-l-4 border-l-lavender-700">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="font-semibold text-slate-900">Kidney Function (CKD)</span>
+                  <span id="ckd-badge" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Stage 1 Normal</span>
+                </div>
+                <div class="mt-2 text-2xl font-bold text-slate-900 font-mono" id="ckd-score">18%</div>
+                <div class="mt-1.5 w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div id="ckd-bar" class="bg-lavender-700 h-full rounded-full" style="width: 19%;"></div>
+                </div>
+                <div class="text-[11px] text-slate-500 mt-1">CKD-EPI 2021 Equation</div>
+              </div>
+
+            </div>
+
+            <!-- Feature Attribution Breakdown (XAI) -->
+            <div class="card-clean p-4 bg-white space-y-2">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider">
+                  Contributing Clinical Risk Drivers
+                </h3>
+                <span class="text-[10px] text-slate-500 font-mono">SHAP Feature Attribution</span>
+              </div>
+              <div id="xai-drivers-list" class="space-y-2 pt-1">
+                <!-- Rendered via JS -->
+              </div>
+            </div>
+
+            <!-- Counterfactual Goal Simulation -->
+            <div class="card-clean p-4 bg-slate-50/70 border border-lavender-200/80 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider">
+                    Target Outcome Simulation
+                  </h3>
+                  <p class="text-[11px] text-slate-500">Projected risk change with targeted blood pressure and lifestyle modifications:</p>
+                </div>
+                <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded" id="whatif-delta-badge">
+                  -38% Risk Reduction
+                </span>
+              </div>
+              
+              <div class="space-y-2 text-xs bg-white p-3 rounded-lg border border-slate-200">
+                <div>
+                  <div class="flex justify-between font-medium">
+                    <span class="text-slate-700">Target Systolic BP Goal:</span>
+                    <span class="font-bold text-lavender-800 font-mono" id="slider-sbp-val">122 mmHg</span>
+                  </div>
+                  <input type="range" id="slider-sbp" min="100" max="180" value="122" class="w-full accent-lavender-700 mt-1" oninput="runWhatIfSimulation()">
+                </div>
+
+                <div>
+                  <div class="flex justify-between font-medium">
+                    <span class="text-slate-700">Target Fasting Blood Sugar:</span>
+                    <span class="font-bold text-lavender-800 font-mono" id="slider-glucose-val">92 mg/dL</span>
+                  </div>
+                  <input type="range" id="slider-glucose" min="70" max="200" value="92" class="w-full accent-lavender-700 mt-1" oninput="runWhatIfSimulation()">
+                </div>
+
+                <div class="pt-1.5 border-t border-slate-100 flex items-center justify-between">
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" id="slider-smoker-quit" checked class="w-3.5 h-3.5 rounded text-lavender-700 focus:ring-0" onchange="runWhatIfSimulation()">
+                    <span class="font-medium text-slate-700">Complete Smoking Cessation</span>
+                  </label>
+                  <span class="text-xs font-bold text-emerald-700 font-mono" id="whatif-net-delta">-38.4%</span>
+                </div>
+              </div>
+
+              <p class="text-[11px] text-slate-600 bg-white p-2.5 rounded border border-slate-200" id="whatif-friendly-text">
+                Projected trajectory: Lowering systolic BP to 122 mmHg and cessation of tobacco use reduces 10-year cardiac event probability from <strong>74% to 36%</strong>.
+              </p>
+            </div>
+
+            <!-- Triage Referral Action -->
+            <div class="card-clean p-4 bg-[#1a162b] text-white flex items-center justify-between gap-3">
+              <div>
+                <div class="text-[10px] font-semibold text-rose-300 uppercase tracking-wider">Algorithmic Referral Triage:</div>
+                <div class="text-sm font-semibold text-white mt-0.5" id="triage-matched-specialist">Dr. Rajesh Sharma, MD, DM (Apollo Heart Institute)</div>
+                <div class="text-[11px] text-slate-400">Clinical handover summary prepared for direct OPD intake.</div>
+              </div>
+              <button onclick="openTriageBookingModal()" class="px-4 py-2 bg-lavender-600 hover:bg-lavender-500 text-white font-semibold text-xs rounded-md shadow-xs transition shrink-0">
+                Schedule Consultation
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ======================================================== -->
+      <!-- DASHBOARD 2: CLINICIAN DASHBOARD (Doctor's View)         -->
+      <!-- ======================================================== -->
+      <div id="dash-doctor" class="dashboard-view hidden space-y-5">
+
+        <!-- Doctor Identity Bar -->
+        <div class="card-clean p-5 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center space-x-3.5">
+            <img id="doctor-profile-avatar" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=256" class="w-12 h-12 rounded-lg object-cover border border-slate-200">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h2 class="text-base font-bold text-slate-900" id="doctor-profile-name">Dr. Rajesh Sharma, MD, DM</h2>
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded bg-emerald-50 text-emerald-700 border border-emerald-200">OPD Active</span>
+              </div>
+              <p class="text-xs text-slate-500" id="doctor-profile-title">Chief of Preventive Cardiology • Apollo Heart Institute, New Delhi</p>
+            </div>
+          </div>
+
+          <!-- Quick Switch Among Doctors -->
+          <div class="flex items-center space-x-1.5 text-xs">
+            <span class="text-slate-400 text-[11px]">Switch Doctor:</span>
+            <button onclick="autofillDoctor('doc-1'); submitDoctorLogin();" class="px-2 py-1 rounded bg-slate-100 text-slate-800 text-[11px] font-medium hover:bg-slate-200 transition">Dr. Rajesh</button>
+            <button onclick="autofillDoctor('doc-2'); submitDoctorLogin();" class="px-2 py-1 rounded bg-slate-100 text-slate-800 text-[11px] font-medium hover:bg-slate-200 transition">Dr. Priya</button>
+            <button onclick="autofillDoctor('doc-3'); submitDoctorLogin();" class="px-2 py-1 rounded bg-slate-100 text-slate-800 text-[11px] font-medium hover:bg-slate-200 transition">Dr. Amitav</button>
+          </div>
+        </div>
+
+        <!-- Queue Header & Counters -->
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">Clinical Triage Intake Queue</h3>
+            <p class="text-xs text-slate-500">Automated risk-stratified referrals pending consultation acceptance</p>
+          </div>
+          <div class="flex items-center space-x-2 text-xs">
+            <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-slate-700">
+              Pending Queue: <strong class="font-mono text-slate-900" id="doc-queue-count">2</strong>
+            </span>
+            <span class="bg-rose-50 border border-rose-200 px-3 py-1 rounded-md text-rose-700">
+              Priority Cases: <strong class="font-mono text-rose-800" id="doc-critical-count">1</strong>
+            </span>
+          </div>
+        </div>
+
+        <!-- Doctor's Stream Cards -->
+        <div class="space-y-3" id="doctor-triage-stream">
+          <!-- Rendered via JS -->
+        </div>
+
+      </div>
+
+      <!-- ======================================================== -->
+      <!-- DASHBOARD 3: HOSPITAL OPERATIONS DASHBOARD               -->
+      <!-- ======================================================== -->
+      <div id="dash-admin" class="dashboard-view hidden space-y-5">
+
+        <!-- Admin Header -->
+        <div class="card-clean p-5 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center space-x-2">
+              <h2 class="text-base font-bold text-slate-900">Hospital Clinical Network Overview</h2>
+              <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Apollo & Max Health Grid</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-0.5">Automated screening metrics, department capacity, and referral dispatch logs.</p>
+          </div>
+          <div class="text-xs text-right text-slate-500">
+            <div>Medical Director: <strong>Dr. Arvind Venkataraman</strong></div>
+            <div class="text-[10px] text-emerald-600 font-semibold">Hospital Grid Status: Online</div>
+          </div>
+        </div>
+
+        <!-- 4 Professional KPI Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+          <div class="card-clean p-3.5 bg-white">
+            <div class="text-slate-500 text-[11px]">Patients Screened</div>
+            <div class="text-xl font-bold text-slate-900 mt-1 font-mono">1,420</div>
+            <div class="text-[10px] text-emerald-600 mt-0.5 font-medium">+18% this month</div>
+          </div>
+
+          <div class="card-clean p-3.5 bg-white">
+            <div class="text-slate-500 text-[11px]">Early Stage Flags</div>
+            <div class="text-xl font-bold text-lavender-700 mt-1 font-mono">384</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Pre-symptomatic catch</div>
+          </div>
+
+          <div class="card-clean p-3.5 bg-white">
+            <div class="text-slate-500 text-[11px]">Avg Triage Turnaround</div>
+            <div class="text-xl font-bold text-slate-900 mt-1 font-mono">4.2 min</div>
+            <div class="text-[10px] text-emerald-600 mt-0.5 font-medium">vs 14 days baseline</div>
+          </div>
+
+          <div class="card-clean p-3.5 bg-white">
+            <div class="text-slate-500 text-[11px]">Available OPD Capacity</div>
+            <div class="text-xl font-bold text-slate-900 mt-1 font-mono">18 slots</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Across 4 departments</div>
+          </div>
+        </div>
+
+        <!-- Capacity & Audit Log -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <!-- Department Load -->
+          <div class="card-clean p-4 bg-white space-y-3">
+            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Department Consultation Load</h3>
+            
+            <div class="space-y-3 text-xs">
+              <div>
+                <div class="flex justify-between font-medium">
+                  <span>Cardiology OPD (Dr. Rajesh Sharma)</span>
+                  <span class="font-bold text-rose-600">88% Capacity</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                  <div class="bg-rose-500 h-full rounded-full" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between font-medium">
+                  <span>Endocrinology OPD (Dr. Priya Nair)</span>
+                  <span class="font-bold text-amber-600">72% Capacity</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                  <div class="bg-amber-500 h-full rounded-full" style="width: 72%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between font-medium">
+                  <span>Neurology OPD (Dr. Sunita Deshmukh)</span>
+                  <span class="font-bold text-slate-700">65% Capacity</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                  <div class="bg-slate-700 h-full rounded-full" style="width: 65%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between font-medium">
+                  <span>Nephrology OPD (Dr. Amitav Banerjee)</span>
+                  <span class="font-bold text-lavender-700">54% Capacity</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                  <div class="bg-lavender-700 h-full rounded-full" style="width: 54%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Audit Log -->
+          <div class="card-clean p-4 bg-white space-y-3">
+            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Clinical Triage Dispatch Log</h3>
+            <div class="space-y-2 text-xs">
+              <div class="p-2.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center justify-between">
+                <div>
+                  <strong class="text-slate-900">Ramesh Patel</strong> referred to Dr. Rajesh Sharma
+                  <div class="text-[10px] text-slate-500">Cardiovascular ASCVD Risk: 74% • Urgent Triage</div>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono">10:28 AM</span>
+              </div>
+
+              <div class="p-2.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center justify-between">
+                <div>
+                  <strong class="text-slate-900">Ananya Sen</strong> appointment locked with Dr. Priya Nair
+                  <div class="text-[10px] text-slate-500">Glycemic Assessment: 42% • Diet & HbA1c Intake</div>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono">09:15 AM</span>
+              </div>
+
+              <div class="p-2.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center justify-between">
+                <div>
+                  <strong class="text-slate-900">Vikram Malhotra</strong> serum creatinine flagged 1.9 mg/dL
+                  <div class="text-[10px] text-slate-500">Dispatched to Dr. Amitav Banerjee (Fortis)</div>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono">Yesterday</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-lavender-200 bg-white py-3.5 text-xs text-slate-500 mt-auto">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div class="font-medium text-slate-700">
+          VITALSYN Clinical Health System
+        </div>
+        <div class="text-[11px] text-slate-400">
+          Predict. Connect. Care. • Apollo & Max Healthcare Network Integration
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: APPOINTMENT CONFIRMATION DIALOG     -->
+  <!-- ========================================== -->
+  <div id="modal-triage-booking" class="fixed inset-0 z-50 bg-[#1a162b]/40 backdrop-blur-xs hidden flex items-center justify-center p-4">
+    <div class="card-clean bg-white max-w-lg w-full p-5 space-y-4 shadow-xl border border-lavender-200">
+      
+      <div class="flex items-center justify-between border-b border-lavender-100 pb-2.5">
+        <div>
+          <h3 class="text-sm font-bold text-slate-900">Consultation Triage Booking</h3>
+          <p class="text-[11px] text-slate-500">Algorithmic specialist matching & electronic clinical handover</p>
+        </div>
+        <button onclick="closeTriageBookingModal()" class="text-slate-400 hover:text-slate-600 p-1">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Doctor Card -->
+      <div class="flex items-center space-x-3 bg-slate-50 p-3 rounded-lg border border-slate-200">
+        <img id="modal-doc-avatar" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=256" class="w-10 h-10 rounded-lg object-cover border border-slate-200">
+        <div>
+          <div class="text-xs font-bold text-slate-900" id="modal-doc-name">Dr. Rajesh Sharma, MD, DM</div>
+          <div class="text-[11px] text-lavender-800 font-medium" id="modal-doc-specialty">Chief of Preventive Cardiology</div>
+          <div class="text-[10px] text-slate-500" id="modal-doc-hospital">Apollo Heart Institute, New Delhi</div>
+        </div>
+      </div>
+
+      <!-- Slot Selection -->
+      <div>
+        <label class="block text-[11px] font-medium text-slate-700 mb-1">Select OPD Consultation Slot</label>
+        <select id="modal-slot-select" class="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-xs text-slate-900 focus:outline-none focus:border-lavender-600">
+          <option value="Tomorrow at 09:30 AM (Urgent Reserved)">Tomorrow at 09:30 AM (Recommended)</option>
+          <option value="Tomorrow at 02:00 PM">Tomorrow at 02:00 PM</option>
+          <option value="Thursday at 11:15 AM">Thursday at 11:15 AM</option>
+        </select>
+      </div>
+
+      <!-- Handover Note -->
+      <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs space-y-1 text-slate-700">
+        <div class="font-semibold text-slate-900 text-[11px]">SBAR Clinical Handover Note:</div>
+        <p class="text-[11px] text-slate-600 leading-relaxed"><span id="modal-sbar-s">...</span></p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex items-center justify-end space-x-2 pt-1 border-t border-slate-100">
+        <button onclick="closeTriageBookingModal()" class="px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-800">
+          Cancel
+        </button>
+        <button onclick="confirmTriageBooking()" class="px-4 py-1.5 bg-lavender-700 hover:bg-lavender-800 text-white font-medium text-xs rounded-md shadow-xs transition">
+          Confirm Appointment
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- App Script -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
