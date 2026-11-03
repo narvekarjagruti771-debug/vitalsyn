@@ -1,5 +1,5 @@
 """
-VITALSYN: AI-Powered Predictive & Preventive Healthcare Ecosystem
+VITALSYNC: AI-Powered Predictive & Preventive Healthcare Ecosystem
 FastAPI Web Server & RESTful API Service
 """
 
@@ -11,11 +11,11 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field
 
-from ml_engine import VitalSynMLEngine
+from ml_engine import VitalSyncMLEngine
 from db import db
 
 app = FastAPI(
-    title="VITALSYN API",
+    title="VITALSYNC API",
     description="Intelligent Disease Risk Assessment, Explainable AI & Smart Risk-to-Appointment Triage",
     version="1.0.0"
 )
@@ -29,9 +29,12 @@ app.add_middleware(
 )
 
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "static")
-os.makedirs(STATIC_DIR, exist_ok=True)
-os.makedirs(os.path.join(STATIC_DIR, "css"), exist_ok=True)
-os.makedirs(os.path.join(STATIC_DIR, "js"), exist_ok=True)
+try:
+    os.makedirs(STATIC_DIR, exist_ok=True)
+    os.makedirs(os.path.join(STATIC_DIR, 'css'), exist_ok=True)
+    os.makedirs(os.path.join(STATIC_DIR, 'js'), exist_ok=True)
+except Exception:
+    pass
 
 # Pydantic Schemas
 class RiskAssessmentRequest(BaseModel):
@@ -82,9 +85,9 @@ class StatusUpdateRequest(BaseModel):
 def health_check():
     return {
         "status": "healthy",
-        "service": "VITALSYN Healthcare Ecosystem",
+        "service": "VITALSYNC Healthcare Ecosystem",
         "version": "1.0.0",
-        "engine": "VitalSyn XAI & Risk-to-Appointment Engine"
+        "engine": "VitalSync XAI & Risk-to-Appointment Engine"
     }
 
 @app.get("/api/doctors")
@@ -108,14 +111,14 @@ def get_patient(pat_id: str):
 @app.post("/api/predict")
 def predict_disease_risks(req: RiskAssessmentRequest):
     data = req.model_dump()
-    evaluation = VitalSynMLEngine.evaluate_all(data)
+    evaluation = VitalSyncMLEngine.evaluate_all(data)
     # Record assessment in history
     recorded = db.record_assessment({**data, **evaluation})
     return evaluation
 
 @app.post("/api/what-if")
 def simulate_counterfactual(req: WhatIfRequest):
-    result = VitalSynMLEngine.compute_counterfactual(req.original_data, req.modified_params)
+    result = VitalSyncMLEngine.compute_counterfactual(req.original_data, req.modified_params)
     return result
 
 @app.get("/api/appointments")

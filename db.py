@@ -1,5 +1,5 @@
 """
-VITALSYN Data Store & In-Memory / File-Persisted Database
+VITALSYNC Data Store & In-Memory / File-Persisted Database
 Indian Healthcare Context: Verified Indian Doctors, Patients & Clinical Personas
 """
 
@@ -9,9 +9,9 @@ import uuid
 from datetime import datetime, timedelta
 from typing import Dict, Any, List, Optional
 
-DB_FILE = os.path.join(os.path.dirname(__file__), "vitalsyn_db.json")
+DB_FILE = os.path.join(os.path.dirname(__file__), "vitalsync_db.json")
 
-class VitalSynDB:
+class VitalSyncDB:
     def __init__(self):
         self.patients: Dict[str, Dict[str, Any]] = {}
         self.doctors: Dict[str, Dict[str, Any]] = {}
@@ -34,8 +34,11 @@ class VitalSynDB:
             "appointments": self.appointments,
             "last_updated": datetime.now().isoformat()
         }
-        with open(DB_FILE, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+        try:
+            with open(DB_FILE, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2)
+        except Exception:
+            pass
 
     def seed_initial_data(self):
         # 1. Indian Certified Medical Specialists
@@ -267,7 +270,7 @@ class VitalSynDB:
                 "glucose": assessment_data.get("fasting_glucose", 95),
                 "risk_score": assessment_data.get("primary_concern", {}).get("risk_score", 0),
                 "risk_category": assessment_data.get("primary_concern", {}).get("category", "Normal"),
-                "risk_note": f"VITALSYN Check: {assessment_data.get('primary_concern', {}).get('disease', 'Evaluation')} ({assessment_data.get('primary_concern', {}).get('risk_score', 0)}%)"
+                "risk_note": f"VITALSYNC Check: {assessment_data.get('primary_concern', {}).get('disease', 'Evaluation')} ({assessment_data.get('primary_concern', {}).get('risk_score', 0)}%)"
             })
         self.save()
         return assessment_data
@@ -306,4 +309,4 @@ class VitalSynDB:
                 return a
         return None
 
-db = VitalSynDB()
+db = VitalSyncDB()

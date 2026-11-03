@@ -1,5 +1,5 @@
 """
-VITALSYN Automated System Test
+VITALSYNC Automated System Test
 Validates:
 1. Multi-disease ML risk calculations (CVD, Diabetes, Stroke, CKD)
 2. Explainable AI (XAI) feature attribution & What-If counterfactual engine
@@ -10,10 +10,10 @@ Validates:
 import sys
 from fastapi.testclient import TestClient
 from main import app
-from ml_engine import VitalSynMLEngine
+from ml_engine import VitalSyncMLEngine
 
 def test_ml_engine():
-    print(">>> Testing VitalSyn ML Engine...")
+    print(">>> Testing VitalSync ML Engine...")
     sample_data = {
         "name": "Test Patient",
         "age": 58,
@@ -32,7 +32,7 @@ def test_ml_engine():
         "afib": False
     }
 
-    eval_result = VitalSynMLEngine.evaluate_all(sample_data)
+    eval_result = VitalSyncMLEngine.evaluate_all(sample_data)
     assert "assessments" in eval_result, "Assessments missing"
     assert eval_result["assessments"]["cardiovascular"]["risk_score"] > 50, "CVD score should be elevated"
     assert len(eval_result["primary_concern"]["drivers"]) > 0, "XAI drivers should be present"
@@ -41,7 +41,7 @@ def test_ml_engine():
     print("  [OK] ML Evaluation & XAI passed successfully.")
 
     # Test What-If
-    what_if = VitalSynMLEngine.compute_counterfactual(sample_data, {"sbp": 120, "smoker": False})
+    what_if = VitalSyncMLEngine.compute_counterfactual(sample_data, {"sbp": 120, "smoker": False})
     assert what_if["risk_reduction_pct"] > 0, "Risk reduction should be positive"
     print(f"  [OK] What-If Simulation passed. Risk reduction: {what_if['risk_reduction_pct']}%")
 

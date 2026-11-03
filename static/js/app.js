@@ -1,5 +1,5 @@
 /**
- * VITALSYN - Individual Multi-Role Authentication Engine
+ * VITALSYNC - Individual Multi-Role Authentication Engine
  * No default auto-login. Starts on dedicated login screen.
  */
 
