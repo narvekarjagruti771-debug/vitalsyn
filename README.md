@@ -2,7 +2,7 @@
 ## AI-Powered Predictive & Preventive Healthcare Ecosystem
 > **“Predict. Connect. Care.”**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnarvekarjagruti771-debug%2Fvitalsyn)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnarvekarjagruti771-debug%2Fvitalsync)
 
 ---
 
@@ -22,8 +22,8 @@
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/narvekarjagruti771-debug/vitalsyn.git
-cd vitalsyn
+git clone https://github.com/narvekarjagruti771-debug/vitalsync.git
+cd vitalsync
 ```
 
 #### 2. Install Dependencies
@@ -44,7 +44,7 @@ python main.py
 VitalSync includes native Vercel configuration (`vercel.json`, `requirements.txt`, and `api/index.py` entrypoint).
 
 1. Go to **[vercel.com/new](https://vercel.com/new)**.
-2. Sign in with GitHub and select your repository: **`vitalsyn`**.
+2. Sign in with GitHub and select your repository: **`vitalsync`**.
 3. Keep default settings (Framework Preset: **Other** / Root Directory: `./`).
 4. Click **Deploy**.
 5. Your platform will be instantly live on a public `https://vitalsync-xxx.vercel.app` domain with automatic SSL and global CDN caching.
