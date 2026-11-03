@@ -7,6 +7,7 @@
 ---
 
 ### 🌐 Accessing the Application
+- **Live Public HTTPS Demo:** [https://imperial-balanced-belong-print.trycloudflare.com](https://imperial-balanced-belong-print.trycloudflare.com)
 - **Local Application URL:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - **Interactive Swagger API Docs:** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 - **Live Vercel Deployment:** Ready for 1-click cloud deployment via `vercel.json` and `@vercel/python` serverless functions.
@@ -46,7 +47,7 @@ VitalSync includes native Vercel configuration (`vercel.json`, `requirements.txt
 2. Sign in with GitHub and select your repository: **`vitalsyn`**.
 3. Keep default settings (Framework Preset: **Other** / Root Directory: `./`).
 4. Click **Deploy**.
-5. Your platform will be instantly live on a public `https://vitalsyn-xxx.vercel.app` domain with automatic SSL and global CDN caching.
+5. Your platform will be instantly live on a public `https://vitalsync-xxx.vercel.app` domain with automatic SSL and global CDN caching.
 
 ---
 
@@ -88,7 +89,7 @@ VitalSync includes native Vercel configuration (`vercel.json`, `requirements.txt
 ### ⏱️ 3-Minute Live Demo Walkthrough
 
 1. **0:00 - 0:45 | Clinical Gateway & Problem Context**  
-   Open `http://127.0.0.1:8000`. Highlight how chronic diseases represent 70%+ of preventable complications in India. Show the dedicated login gateway.
+   Open the application URL. Highlight how chronic diseases represent 70%+ of preventable complications in India. Show the dedicated login gateway.
 
 2. **0:45 - 1:45 | Patient Portal & Explainable AI**  
    Click *Ramesh Patel (ASCVD)* demo autofill &rarr; Click **Sign In as Patient**. Show the multi-disease risk cards (60.5% ASCVD Risk). Demonstrate the **What-If slider**: slide SBP from 160 to 120 mmHg and toggle smoking cessation to show a **53.4% risk reduction**.
