@@ -1,5 +1,5 @@
 """
-VITALSYN ML & Explainable AI (XAI) Engine
+VITALSYNC ML & Explainable AI (XAI) Engine
 Predictive healthcare risk estimation, SHAP-style factor attribution,
 counterfactual what-if simulation, and automated clinical triage generation.
 """
@@ -7,7 +7,7 @@ counterfactual what-if simulation, and automated clinical triage generation.
 from typing import Dict, Any, List, Tuple
 import math
 
-class VitalSynMLEngine:
+class VitalSyncMLEngine:
     """
     Multi-disease predictive engine incorporating clinical guidelines:
     - ACC/AHA & Framingham ASCVD Risk Estimator
@@ -507,7 +507,7 @@ class VitalSynMLEngine:
         smoker = data.get("smoker", False)
 
         situation = (
-            f"VITALSYN AI triage flag: {name}, {age}yo {sex}, evaluated with {primary['category']} "
+            f"VITALSYNC AI triage flag: {name}, {age}yo {sex}, evaluated with {primary['category']} "
             f"for {primary['disease']} (Model Predicted Risk Score: {primary['risk_score']}%). "
             f"Triage Urgency: {primary['urgency']}."
         )
@@ -515,7 +515,7 @@ class VitalSynMLEngine:
         background = (
             f"Biomarker baseline: Blood Pressure {sbp}/{dbp} mmHg, Fasting Glucose {glucose} mg/dL, "
             f"Total Cholesterol {tc} mg/dL. Tobacco status: {'Active Smoker' if smoker else 'Non-smoker'}. "
-            f"Patient has active monitoring via VITALSYN predictive preventive portal."
+            f"Patient has active monitoring via VITALSYNC predictive preventive portal."
         )
 
         top_drivers = ", ".join([f"{d['feature']} ({d['value']}, impact {d['impact']:+0.1f}%)" for d in primary['drivers'][:3]])
@@ -538,3 +538,6 @@ class VitalSynMLEngine:
             "assessment": assessment,
             "recommendation": recommendation
         }
+
+# Backwards compatibility alias
+VitalSynMLEngine = VitalSyncMLEngine

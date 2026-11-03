@@ -1,19 +1,25 @@
-/* VITALSYN - Professional Human-Crafted Clinical Portal */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* VITALSYNC - Clean Clinical Health Ecosystem Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  --bg-main: #fcfbfe;
-  --bg-sidebar: #ffffff;
+  --bg-main: #f1edf8;
+  --bg-card: #ffffff;
   --card-border: #ede8f5;
   --card-hover-border: #dcd3ee;
   --lavender-50: #fbf9fe;
   --lavender-100: #f4effc;
   --lavender-200: #e9def8;
+  --lavender-300: #d7c5f3;
   --lavender-600: #7c4dff;
   --lavender-700: #673ab7;
+  --lavender-800: #512da8;
   --text-primary: #1a162b;
-  --text-secondary: #5a556e;
-  --text-muted: #8b859e;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,36 +27,37 @@ body {
   background-color: var(--bg-main);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
 
 .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Authentic card with crisp hair-thin border */
+/* Crisp Clean Clinical Card */
 .card-clean {
   background: #ffffff;
   border: 1px solid var(--card-border);
-  box-shadow: 0 1px 3px rgba(26, 22, 43, 0.03), 0 4px 16px -2px rgba(103, 58, 183, 0.04);
+  box-shadow: 0 1px 3px rgba(26, 22, 43, 0.03), 0 4px 16px -2px rgba(103, 58, 183, 0.05);
   border-radius: 0.875rem;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-clean:hover {
   border-color: var(--card-hover-border);
-  box-shadow: 0 2px 6px rgba(26, 22, 43, 0.04), 0 8px 24px -4px rgba(103, 58, 183, 0.07);
+  box-shadow: 0 4px 12px rgba(26, 22, 43, 0.05), 0 8px 24px -4px rgba(103, 58, 183, 0.08);
 }
 
 /* Portal navigation pill */
 .portal-pill {
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.15s ease;
 }
 
 .portal-pill.active {
-  background-color: #673ab7;
-  color: #ffffff;
-  box-shadow: 0 2px 8px rgba(103, 58, 183, 0.25);
+  background-color: var(--lavender-700) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(103, 58, 183, 0.25) !important;
 }
 
 .portal-pill:not(.active) {
@@ -60,10 +67,32 @@ body {
 
 .portal-pill:not(.active):hover {
   background-color: #f4effc;
-  color: #512da8;
+  color: var(--lavender-800);
 }
 
-/* Professional clinical range slider */
+/* Form Inputs with Clear Crisp Contrast */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  border-radius: 0.5rem !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus {
+  background-color: #ffffff !important;
+  border-color: var(--lavender-600) !important;
+  box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.15) !important;
+  outline: none !important;
+}
+
+/* Range Slider */
 input[type="range"] {
   height: 6px;
   border-radius: 9999px;
@@ -74,13 +103,13 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: #673ab7;
+  background: var(--lavender-700);
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  transition: transform 0.1s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
@@ -88,19 +117,307 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 .dashboard-view {
-  animation: viewFadeIn 0.15s ease-out;
+  animation: viewFadeIn 0.2s ease-out;
 }
 
 @keyframes viewFadeIn {
-  from { opacity: 0; transform: translateY(3px); }
+  from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media print {
-  body {
-    background: #ffffff !important;
+/* Section styling for smooth showcase flow */
+.landing-section {
+  scroll-margin-top: 5rem;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==========================================================================
+   GTA VI CINEMATIC SCROLL EXPERIENCE (Clean Clinical Palette)
+   - Kinetic Section Snapping (Scene by Scene)
+   - Box Appearing From Bottom Animation (Intersection Observer Driven)
+   - Dynamic Video Playback Scrubber & Ambient Telemetry Wave
+   - Right-side Interactive Scene Timeline Scrubber
+   ========================================================================== */
+
+/* Enable Smooth Cinematic Section Snapping */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y proximity;
   }
-  .no-print {
-    display: none !important;
+}
+
+/* Cinematic Section Viewport */
+.gta-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 5rem 1.25rem 4rem 1.25rem;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+@media (max-width: 1023px) {
+  .gta-section {
+    min-height: auto;
+    padding: 4rem 1rem;
+    scroll-snap-align: none;
   }
+}
+
+/* THE GTA 6 CINEMATIC BOX: Warm contrasting luxury card with distinct pop-up rise */
+.gta-box {
+  opacity: 0;
+  transform: translateY(120px) scale(0.92);
+  filter: blur(8px);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, filter;
+  background: linear-gradient(168deg, #ffffff 0%, #fffdfa 32%, #fff7ed 72%, #ffedd5 100%);
+  border: 1.5px solid rgba(251, 146, 60, 0.45);
+  box-shadow: 0 30px 75px -15px rgba(234, 88, 12, 0.20),
+              0 15px 35px -8px rgba(103, 58, 183, 0.14),
+              0 0 0 1px rgba(254, 215, 170, 0.8) inset,
+              0 2px 6px rgba(251, 146, 60, 0.12);
+  border-radius: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing Warm Crown Rim along the top of every box */
+.gta-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5px;
+  background: linear-gradient(90deg, #f97316 0%, #fb923c 25%, #ec4899 65%, #7c4dff 100%);
+  box-shadow: 0 2px 14px rgba(249, 115, 22, 0.5);
+  z-index: 5;
+}
+
+/* Revealed State when user scrolls into section */
+.gta-box.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+}
+
+/* Inner cards inside warm box maintain crisp white contrast with warm borders */
+.gta-box .card-clean {
+  background: #ffffff;
+  border: 1px solid rgba(254, 215, 170, 0.85);
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.05), 0 4px 16px -2px rgba(103, 58, 183, 0.06);
+}
+
+.gta-box .card-clean:hover {
+  border-color: #fb923c;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.12), 0 10px 25px -4px rgba(103, 58, 183, 0.10);
+}
+
+/* Warm HUD Badges */
+.gta-hud-pill {
+  font-family: 'JetBrains Mono', monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fdba74;
+  color: #c2410c;
+  box-shadow: 0 2px 10px rgba(249, 115, 22, 0.18);
+}
+
+.gta-rec-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ea580c;
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.9);
+  animation: pulseDot 1.4s infinite;
+}
+
+/* Video Scrubber Warm Gradient */
+#video-scrubber-bar {
+  background: linear-gradient(90deg, #f97316, #fb923c, #ec4899, #7c4dff);
+  box-shadow: 0 0 14px rgba(249, 115, 22, 0.8);
+}
+
+/* Ambient Video-Like Glow & Telemetry Background */
+.ambient-video-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.65;
+}
+
+.ambient-orb {
+  position: absolute;
+  filter: blur(90px);
+  border-radius: 50%;
+  animation: orbDrift 20s infinite alternate ease-in-out;
+}
+
+.ambient-orb-1 {
+  width: 450px;
+  height: 450px;
+  top: 10%;
+  left: -80px;
+  background: radial-gradient(circle, rgba(163, 116, 234, 0.18) 0%, rgba(244, 239, 252, 0) 70%);
+}
+
+.ambient-orb-2 {
+  width: 500px;
+  height: 500px;
+  bottom: 15%;
+  right: -100px;
+  background: radial-gradient(circle, rgba(124, 77, 255, 0.14) 0%, rgba(244, 239, 252, 0) 70%);
+  animation-delay: -10s;
+}
+
+@keyframes orbDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, -40px) scale(1.15); }
+  100% { transform: translate(-30px, 50px) scale(0.95); }
+}
+
+/* Floating Cinematic Scene Navigation Scrubber (GTA6 Style) */
+.gta-scene-nav {
+  position: fixed;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+@media (max-width: 1100px) {
+  .gta-scene-nav {
+    display: none;
+  }
+}
+
+.scene-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.25rem 0;
+  text-decoration: none;
+}
+
+.scene-nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #cbd5e1;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scene-nav-item:hover .scene-nav-dot {
+  background: #7c4dff;
+  transform: scale(1.3);
+}
+
+.scene-nav-item.active .scene-nav-dot {
+  width: 8px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #512da8;
+  box-shadow: 0 0 10px rgba(81, 45, 168, 0.5);
+}
+
+.scene-nav-label {
+  opacity: 0;
+  transform: translateX(12px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #512da8;
+  background: white;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1px solid #e9def8;
+  box-shadow: 0 4px 12px rgba(81, 45, 168, 0.08);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.scene-nav-item:hover .scene-nav-label,
+.scene-nav-item.active .scene-nav-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Cinematic Video-Player HUD Badge */
+.gta-hud-pill {
+  font-family: 'JetBrains Mono', monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: white;
+  border: 1px solid #e9def8;
+  color: #512da8;
+  box-shadow: 0 2px 8px rgba(81, 45, 168, 0.06);
+}
+
+.gta-rec-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: pulseDot 1.6s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 8px rgba(16, 185, 129, 0.8); }
+  100% { transform: scale(0.9); opacity: 0.8; }
 }

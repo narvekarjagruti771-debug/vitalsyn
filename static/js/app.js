@@ -1,5 +1,5 @@
 /**
- * VITALSYN - Individual Multi-Role Authentication Engine
+ * VITALSYNC - Individual Multi-Role Authentication Engine
  * No default auto-login. Starts on dedicated login screen.
  */
 
@@ -22,6 +22,7 @@ let appState = {
 
 document.addEventListener('DOMContentLoaded', async () => {
   if (window.lucide) lucide.createIcons();
+  initGTAScrollEngine();
   await loadDoctors();
   await loadAppointments();
   // We do NOT auto-login. The login screen stays visible by default!
@@ -237,6 +238,7 @@ async function loadDoctors() {
     if (!appState.currentDoctor && appState.doctors.length > 0) {
       appState.currentDoctor = appState.doctors[0];
     }
+    renderLandingDoctors();
   } catch (err) {
     console.error('Error fetching doctors:', err);
   }
@@ -300,26 +302,47 @@ async function loadPersona(patId) {
 // Run Prediction
 async function runPrediction() {
   const btn = document.getElementById('btn-run-prediction');
-  if (btn) btn.disabled = true;
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = "Recalculating...";
+  }
+
+  const getVal = (id, defaultVal) => {
+    const el = document.getElementById(id);
+    if (!el) return defaultVal;
+    const v = parseFloat(el.value);
+    return isNaN(v) ? defaultVal : v;
+  };
+
+  const sbp = getVal('inp-sbp', 120);
+  const dbp = getVal('inp-dbp', 80);
+  const age = getVal('inp-age', 50);
+  const totalChol = getVal('inp-total-chol', 190);
+  const hdlChol = getVal('inp-hdl-chol', 50);
+  const fastingGlucose = getVal('inp-fasting-glucose', 100);
+  const bmi = getVal('inp-bmi', 24.5);
+  const hba1c = getVal('inp-hba1c', 5.4);
+  const creatinine = getVal('inp-creatinine', 1.0);
+  const uacr = getVal('inp-uacr', 20.0);
 
   const payload = {
-    patient_id: appState.currentPatientId,
-    name: document.getElementById('inp-name').value,
-    age: parseFloat(document.getElementById('inp-age').value),
-    sex: document.getElementById('inp-sex').value,
-    bmi: parseFloat(document.getElementById('inp-bmi').value),
-    sbp: parseFloat(document.getElementById('inp-sbp').value),
-    dbp: parseFloat(document.getElementById('inp-dbp').value),
-    total_chol: parseFloat(document.getElementById('inp-total-chol').value),
-    hdl_chol: parseFloat(document.getElementById('inp-hdl-chol').value),
-    fasting_glucose: parseFloat(document.getElementById('inp-fasting-glucose').value),
-    hba1c: parseFloat(document.getElementById('inp-hba1c').value),
-    serum_creatinine: parseFloat(document.getElementById('inp-creatinine').value),
-    uacr: parseFloat(document.getElementById('inp-uacr').value),
-    smoker: document.getElementById('inp-smoker').checked,
-    diabetes: document.getElementById('inp-diabetes').checked,
-    afib: document.getElementById('inp-afib').value === 'true',
-    physical_activity: document.getElementById('inp-active').value === 'true'
+    patient_id: appState.currentPatientId || 'pat-guest',
+    name: (document.getElementById('inp-name') && document.getElementById('inp-name').value) || "Patient",
+    age: age,
+    sex: (document.getElementById('inp-sex') && document.getElementById('inp-sex').value) || "male",
+    bmi: bmi,
+    sbp: sbp,
+    dbp: dbp,
+    total_chol: totalChol,
+    hdl_chol: hdlChol,
+    fasting_glucose: fastingGlucose,
+    hba1c: hba1c,
+    serum_creatinine: creatinine,
+    uacr: uacr,
+    smoker: document.getElementById('inp-smoker') ? document.getElementById('inp-smoker').checked : false,
+    diabetes: document.getElementById('inp-diabetes') ? document.getElementById('inp-diabetes').checked : false,
+    afib: document.getElementById('inp-afib') ? (document.getElementById('inp-afib').value === 'true') : false,
+    physical_activity: document.getElementById('inp-active') ? (document.getElementById('inp-active').value === 'true') : true
   };
 
   try {
@@ -330,25 +353,52 @@ async function runPrediction() {
     });
 
     const data = await res.json();
+
+    if (!res.ok) {
+      let errMsg = "Validation Error";
+      if (data && data.detail) {
+        if (Array.isArray(data.detail)) {
+          errMsg = data.detail.map(d => `${d.loc ? d.loc.slice(-1)[0] + ': ' : ''}${d.msg}`).join(', ');
+        } else if (typeof data.detail === 'string') {
+          errMsg = data.detail;
+        }
+      }
+      showToast(errMsg, "error");
+      return;
+    }
+
     appState.currentEvaluation = data;
 
-    updateDiseaseCard('cvd', data.assessments.cardiovascular);
-    updateDiseaseCard('diabetes', data.assessments.diabetes);
-    updateDiseaseCard('stroke', data.assessments.stroke);
-    updateDiseaseCard('ckd', data.assessments.ckd);
+    if (data.assessments) {
+      if (data.assessments.cardiovascular) updateDiseaseCard('cvd', data.assessments.cardiovascular);
+      if (data.assessments.diabetes) updateDiseaseCard('diabetes', data.assessments.diabetes);
+      if (data.assessments.stroke) updateDiseaseCard('stroke', data.assessments.stroke);
+      if (data.assessments.ckd) updateDiseaseCard('ckd', data.assessments.ckd);
+    }
 
-    renderXAIFeatureAttribution(data.primary_concern.drivers);
+    if (data.primary_concern && data.primary_concern.drivers) {
+      renderXAIFeatureAttribution(data.primary_concern.drivers);
+    }
 
-    document.getElementById('slider-sbp').value = Math.max(118, Math.min(130, payload.sbp - 30));
-    document.getElementById('slider-glucose').value = Math.max(85, Math.min(100, payload.fasting_glucose - 20));
-    document.getElementById('slider-smoker-quit').checked = true;
+    const sliderSbp = document.getElementById('slider-sbp');
+    if (sliderSbp) sliderSbp.value = Math.max(110, Math.min(140, Math.round(payload.sbp * 0.75)));
+    const sliderGluc = document.getElementById('slider-glucose');
+    if (sliderGluc) sliderGluc.value = Math.max(85, Math.min(110, Math.round(payload.fasting_glucose * 0.85)));
+    const sliderSmoke = document.getElementById('slider-smoker-quit');
+    if (sliderSmoke) sliderSmoke.checked = true;
+
     await runWhatIfSimulation();
-
     updateTriageTriggerBar(data);
+
+    showToast("Clinical risk recalculated successfully!", "success");
   } catch (err) {
     console.error('Error running prediction:', err);
+    showToast("Error recalculating risk: " + (err.message || err), "error");
   } finally {
-    if (btn) btn.disabled = false;
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = "Recalculate Clinical Risk";
+    }
   }
 }
 
@@ -363,13 +413,13 @@ function updateDiseaseCard(prefix, assessment) {
   if (badgeElem) {
     if (assessment.risk_score >= 50) {
       badgeElem.textContent = 'High Risk';
-      badgeElem.className = 'px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-50 text-rose-700 border border-rose-200';
+      badgeElem.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200';
     } else if (assessment.risk_score >= 25) {
       badgeElem.textContent = 'Moderate';
-      badgeElem.className = 'px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200';
+      badgeElem.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200';
     } else {
       badgeElem.textContent = 'Optimal / Low';
-      badgeElem.className = 'px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+      badgeElem.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200';
     }
   }
 }
@@ -400,7 +450,7 @@ function renderXAIFeatureAttribution(drivers) {
     const desc = clinicalExplanations[d.feature] || d.description;
 
     return `
-      <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 flex items-start justify-between gap-3 text-xs">
+      <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/70 flex items-start justify-between gap-3 text-xs">
         <div>
           <div class="font-semibold text-slate-900 flex items-center space-x-1.5">
             <span>${d.feature}</span>
@@ -630,4 +680,111 @@ async function updateApptStatus(apptId, newStatus) {
   } catch (err) {
     console.error('Error updating status:', err);
   }
+}
+
+
+// Landing Page Showcase: Render verified doctors
+function renderLandingDoctors() {
+  const grid = document.getElementById('landing-doctors-grid');
+  if (!grid || !appState.doctors || appState.doctors.length === 0) return;
+
+  grid.innerHTML = appState.doctors.map(doc => {
+    const slotCount = (doc.available_slots && doc.available_slots.length) ? `${doc.available_slots.length} Slots Today` : '3 Slots Today';
+    return `
+      <div class="card-clean p-5 flex flex-col justify-between hover:shadow-lg transition bg-white border border-slate-200/90 shadow-xs">
+        <div>
+          <div class="flex items-center space-x-3.5 mb-3.5">
+            <img src="${doc.avatar}" alt="${doc.name}" class="w-13 h-13 rounded-xl object-cover border border-slate-200 shadow-sm">
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">${doc.name}</h4>
+              <span class="inline-block text-[11px] font-semibold text-lavender-800 bg-lavender-50 px-2 py-0.5 rounded border border-lavender-200 mt-0.5">${doc.specialty}</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 mb-2">${doc.title}</p>
+          <p class="text-xs text-slate-600 font-medium flex items-center space-x-1.5 mb-4">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i>
+            <span>${doc.hospital}</span>
+          </p>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded flex items-center space-x-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>${slotCount}</span>
+          </span>
+          <a href="#portal" onclick="quickSelectDoctor('${doc.id}')" class="px-3.5 py-1.5 rounded-lg bg-lavender-700 hover:bg-lavender-800 text-white font-semibold text-xs shadow-xs transition">
+            Book Triage
+          </a>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  if (window.lucide) lucide.createIcons();
+}
+
+// GTA VI SCROLL ENGINE: Box emergence from bottom + Video Scrubber + Scene Nav
+function initGTAScrollEngine() {
+  const boxes = document.querySelectorAll('.gta-box');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  boxes.forEach(box => observer.observe(box));
+
+  // Ensure hero is revealed on load
+  const heroBox = document.querySelector('#hero .gta-box');
+  if (heroBox) {
+    heroBox.classList.add('is-revealed');
+  }
+
+  // Update top scrubber bar & right-hand timeline dots on scroll
+  const scrubber = document.getElementById('video-scrubber-bar');
+  const sceneItems = document.querySelectorAll('.scene-nav-item');
+  const sections = ['hero', 'about', 'what-we-do', 'doctors', 'book-appointment', 'why-choose-us', 'portal'];
+
+  const onScroll = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrubber && docHeight > 0) {
+      const pct = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+      scrubber.style.width = pct + '%';
+    }
+
+    let currentSec = 'hero';
+    for (const secId of sections) {
+      const el = document.getElementById(secId);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.45) {
+          currentSec = secId;
+        }
+      }
+    }
+
+    sceneItems.forEach(item => {
+      if (item.getAttribute('data-target') === currentSec) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+function quickSelectDoctor(docId) {
+  autofillDoctor(docId);
+  setLoginTab('doctor');
+  const target = document.getElementById('portal');
+  if (target) target.scrollIntoView({ behavior: 'smooth' });
 }

@@ -1,5 +1,5 @@
 """
-VITALSYN: AI-Powered Predictive & Preventive Healthcare Ecosystem
+VITALSYNC: AI-Powered Predictive & Preventive Healthcare Ecosystem
 FastAPI Web Server & RESTful API Service
 """
 
@@ -9,13 +9,14 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
-from pydantic import BaseModel, Field
+import math
+from pydantic import BaseModel, Field, model_validator
 
-from ml_engine import VitalSynMLEngine
+from ml_engine import VitalSyncMLEngine
 from db import db
 
 app = FastAPI(
-    title="VITALSYN API",
+    title="VITALSYNC API",
     description="Intelligent Disease Risk Assessment, Explainable AI & Smart Risk-to-Appointment Triage",
     version="1.0.0"
 )
@@ -35,19 +36,19 @@ os.makedirs(os.path.join(STATIC_DIR, "js"), exist_ok=True)
 
 # Pydantic Schemas
 class RiskAssessmentRequest(BaseModel):
-    patient_id: Optional[str] = None
+    patient_id: Optional[str] = "pat-guest"
     name: str = "Anonymous Patient"
-    age: float = Field(..., ge=18, le=110)
+    age: float = Field(50.0, ge=1.0, le=130.0)
     sex: str = "male"
-    sbp: float = Field(..., ge=70, le=240, description="Systolic Blood Pressure (mmHg)")
-    dbp: float = Field(..., ge=40, le=140, description="Diastolic Blood Pressure (mmHg)")
-    fasting_glucose: float = Field(..., ge=50, le=450, description="Fasting Blood Glucose (mg/dL)")
-    hba1c: float = Field(5.4, ge=4.0, le=16.0, description="HbA1c percentage")
-    total_chol: float = Field(190.0, ge=80, le=450, description="Total Cholesterol (mg/dL)")
-    hdl_chol: float = Field(50.0, ge=15, le=120, description="HDL Cholesterol (mg/dL)")
-    bmi: float = Field(24.5, ge=14.0, le=60.0, description="Body Mass Index (kg/m2)")
-    serum_creatinine: float = Field(1.0, ge=0.3, le=10.0, description="Serum Creatinine (mg/dL)")
-    uacr: float = Field(20.0, ge=1.0, le=1000.0, description="Urine Albumin/Creatinine (mg/g)")
+    sbp: float = Field(120.0, ge=30.0, le=500.0, description="Systolic Blood Pressure (mmHg)")
+    dbp: float = Field(80.0, ge=20.0, le=300.0, description="Diastolic Blood Pressure (mmHg)")
+    fasting_glucose: float = Field(100.0, ge=20.0, le=1000.0, description="Fasting Blood Glucose (mg/dL)")
+    hba1c: float = Field(5.4, ge=2.0, le=25.0, description="HbA1c percentage")
+    total_chol: float = Field(190.0, ge=40.0, le=1000.0, description="Total Cholesterol (mg/dL)")
+    hdl_chol: float = Field(50.0, ge=5.0, le=250.0, description="HDL Cholesterol (mg/dL)")
+    bmi: float = Field(24.5, ge=8.0, le=100.0, description="Body Mass Index (kg/m2)")
+    serum_creatinine: float = Field(1.0, ge=0.1, le=30.0, description="Serum Creatinine (mg/dL)")
+    uacr: float = Field(20.0, ge=0.1, le=5000.0, description="Urine Albumin/Creatinine (mg/g)")
     smoker: bool = False
     diabetes: bool = False
     bp_treated: bool = False
@@ -55,6 +56,39 @@ class RiskAssessmentRequest(BaseModel):
     family_history: bool = False
     afib: bool = False
     prev_tia: bool = False
+
+    @model_validator(mode="before")
+    @classmethod
+    def sanitize_inputs(cls, data: Any):
+        if isinstance(data, dict):
+            cleaned = dict(data)
+            bounds = {
+                "age": (1.0, 130.0, 50.0),
+                "sbp": (30.0, 500.0, 120.0),
+                "dbp": (20.0, 300.0, 80.0),
+                "fasting_glucose": (20.0, 1000.0, 100.0),
+                "hba1c": (2.0, 25.0, 5.4),
+                "total_chol": (40.0, 1000.0, 190.0),
+                "hdl_chol": (5.0, 250.0, 50.0),
+                "bmi": (8.0, 100.0, 24.5),
+                "serum_creatinine": (0.1, 30.0, 1.0),
+                "uacr": (0.1, 5000.0, 20.0),
+            }
+            for k, (low, high, default_val) in bounds.items():
+                val = cleaned.get(k)
+                if val is None or val == "" or str(val).strip() == "":
+                    cleaned[k] = default_val
+                else:
+                    try:
+                        num = float(val)
+                        if math.isnan(num) or math.isinf(num):
+                            cleaned[k] = default_val
+                        else:
+                            cleaned[k] = min(max(num, low), high)
+                    except (ValueError, TypeError):
+                        cleaned[k] = default_val
+            return cleaned
+        return data
 
 class WhatIfRequest(BaseModel):
     original_data: Dict[str, Any]
@@ -82,9 +116,9 @@ class StatusUpdateRequest(BaseModel):
 def health_check():
     return {
         "status": "healthy",
-        "service": "VITALSYN Healthcare Ecosystem",
+        "service": "VITALSYNC Healthcare Ecosystem",
         "version": "1.0.0",
-        "engine": "VitalSyn XAI & Risk-to-Appointment Engine"
+        "engine": "VitalSync XAI & Risk-to-Appointment Engine"
     }
 
 @app.get("/api/doctors")
@@ -108,14 +142,14 @@ def get_patient(pat_id: str):
 @app.post("/api/predict")
 def predict_disease_risks(req: RiskAssessmentRequest):
     data = req.model_dump()
-    evaluation = VitalSynMLEngine.evaluate_all(data)
+    evaluation = VitalSyncMLEngine.evaluate_all(data)
     # Record assessment in history
     recorded = db.record_assessment({**data, **evaluation})
     return evaluation
 
 @app.post("/api/what-if")
 def simulate_counterfactual(req: WhatIfRequest):
-    result = VitalSynMLEngine.compute_counterfactual(req.original_data, req.modified_params)
+    result = VitalSyncMLEngine.compute_counterfactual(req.original_data, req.modified_params)
     return result
 
 @app.get("/api/appointments")
