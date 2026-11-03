@@ -30,9 +30,12 @@ app.add_middleware(
 )
 
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "static")
-os.makedirs(STATIC_DIR, exist_ok=True)
-os.makedirs(os.path.join(STATIC_DIR, "css"), exist_ok=True)
-os.makedirs(os.path.join(STATIC_DIR, "js"), exist_ok=True)
+try:
+    os.makedirs(STATIC_DIR, exist_ok=True)
+    os.makedirs(os.path.join(STATIC_DIR, 'css'), exist_ok=True)
+    os.makedirs(os.path.join(STATIC_DIR, 'js'), exist_ok=True)
+except Exception:
+    pass
 
 # Pydantic Schemas
 class RiskAssessmentRequest(BaseModel):

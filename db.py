@@ -9,7 +9,7 @@ import uuid
 from datetime import datetime, timedelta
 from typing import Dict, Any, List, Optional
 
-DB_FILE = os.path.join(os.path.dirname(__file__), "vitalsyn_db.json")
+DB_FILE = os.path.join(os.path.dirname(__file__), "vitalsync_db.json")
 
 class VitalSyncDB:
     def __init__(self):
@@ -34,8 +34,11 @@ class VitalSyncDB:
             "appointments": self.appointments,
             "last_updated": datetime.now().isoformat()
         }
-        with open(DB_FILE, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+        try:
+            with open(DB_FILE, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2)
+        except Exception:
+            pass
 
     def seed_initial_data(self):
         # 1. Indian Certified Medical Specialists

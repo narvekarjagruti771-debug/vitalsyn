@@ -100,9 +100,9 @@ def test_api():
 
     # Create Appointment
     new_appt = {
-        "patient_name": "Robert Chen",
+        "patient_name": "Ramesh Patel",
         "doctor_id": "doc-1",
-        "doctor_name": "Dr. Elena Vance",
+        "doctor_name": "Dr. Rajesh Sharma",
         "specialty": "Cardiology",
         "slot": "Tomorrow at 09:30 AM",
         "urgency": "Urgent (Within 48h)",
